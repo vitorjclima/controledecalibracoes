@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+  <persistence-unit name="br.com.vitorjclima_ControleDeCalibracoes_jar_1.0-SNAPSHOTPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>br.com.vitorjclima.controledecalibracoes.db.EquipamentoPessoa</class>
+    <class>br.com.vitorjclima.controledecalibracoes.db.Equipamento</class>
+    <class>br.com.vitorjclima.controledecalibracoes.db.Anexo</class>
+    <class>br.com.vitorjclima.controledecalibracoes.db.LaudoIntervencao</class>
+    <class>br.com.vitorjclima.controledecalibracoes.db.Frequencia</class>
+    <class>br.com.vitorjclima.controledecalibracoes.db.Intervencao</class>
+    <class>br.com.vitorjclima.controledecalibracoes.db.IntervencaoAnexo</class>
+    <class>br.com.vitorjclima.controledecalibracoes.db.EquipamentoAnexo</class>
+    <class>br.com.vitorjclima.controledecalibracoes.db.Empresa</class>
+    <class>br.com.vitorjclima.controledecalibracoes.db.Pessoa</class>
+    <class>br.com.vitorjclima.controledecalibracoes.db.Condicao</class>
+    <class>br.com.vitorjclima.controledecalibracoes.db.EmpresaAnexo</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://maxses.com.br:3306/natura_controle_calibracao?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.password" value="drr_2017-X"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.user" value="natura_ContrCal"/>
+      <property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>
+    </properties>
+  </persistence-unit>
+</persistence>
