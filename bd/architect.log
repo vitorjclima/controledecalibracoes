@@ -15491,3 +15491,1505 @@
 218367 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_email: VARCHAR(200)
 218368 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_id: INTEGER
 218368 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+0    [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ArchitectUtils  - Log4J configured successfully
+2356 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Beginning to read/merge new pl.ini data
+2515 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Finished reading file.
+2515 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Beginning to read/merge new pl.ini data
+2696 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Finished reading file.
+4159 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.dbtree.DBTreeModel  - Changing a UUID. This should only be done during load.
+4166 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.dbtree.DBTreeModel  - Changing a UUID. This should only be done during load.
+4168 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.dbtree.DBTreeModel  - Changing a UUID. This should only be done during load.
+4171 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.dbtree.DBTreeModel  - Changing a UUID. This should only be done during load.
+4173 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.dbtree.DBTreeModel  - Changing a UUID. This should only be done during load.
+4175 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.dbtree.DBTreeModel  - Changing a UUID. This should only be done during load.
+4177 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.dbtree.DBTreeModel  - Changing a UUID. This should only be done during load.
+4179 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.dbtree.DBTreeModel  - Changing a UUID. This should only be done during load.
+4181 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.dbtree.DBTreeModel  - Changing a UUID. This should only be done during load.
+4182 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.dbtree.DBTreeModel  - Changing a UUID. This should only be done during load.
+4184 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.dbtree.DBTreeModel  - Changing a UUID. This should only be done during load.
+4186 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.dbtree.DBTreeModel  - Changing a UUID. This should only be done during load.
+4188 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.dbtree.DBTreeModel  - Changing a UUID. This should only be done during load.
+4190 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.dbtree.DBTreeModel  - Changing a UUID. This should only be done during load.
+4248 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - TablePane: equipamento (TABLE) is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4249 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - TablePane: frequencia (TABLE) is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4250 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - TablePane: condicao (TABLE) is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4252 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - TablePane: intervencao (TABLE) is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4253 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - TablePane: laudo_intervencao (TABLE) is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4254 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - TablePane: empresa (TABLE) is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4255 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - TablePane: anexo (TABLE) is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4256 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - TablePane: empresa_anexo (TABLE) is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4257 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - TablePane: equipamento_anexo (TABLE) is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4257 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - TablePane: intervencao_anexo (TABLE) is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4258 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - TablePane: pessoa (TABLE) is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4259 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - TablePane: equipamento_pessoa (TABLE) is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4301 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - Relationship: equipamento_frequencia_calibracao_fk is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4328 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - Relationship: equipamento_condicao_fk is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4334 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - Relationship: intervencao_laudo_intervencao_fk is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4336 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - Relationship: intervencao_equipamento_fk is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4339 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - Relationship: empresa_intervencao_fk is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4343 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - Relationship: empresa_equipamento_fk is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4346 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - Relationship: empresa_empresa_anexo_fk is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4348 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - Relationship: anexo_empresa_anexo_fk is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4350 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - Relationship: anexo_equipamento_anexo_fk is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4352 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - Relationship: equipamento_equipamento_anexo_fk is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4354 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - Relationship: anexo_intervencao_anexo_fk is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4356 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - Relationship: intervencao_intervencao_anexo_fk is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4357 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - Relationship: pessoa_equipamento_pessoa_fk is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4359 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - Relationship: equipamento_equipamento_pessoa_fk is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+5410 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+5411 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+5412 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+5412 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_descricao: VARCHAR(50)
+5413 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_modelo: VARCHAR(50)
+5413 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_numero_serie: VARCHAR(50)
+5414 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_faixa_medicao: VARCHAR(20)
+5414 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_menor_divisao: VARCHAR(10)
+5415 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_tolerancia: REAL
+5415 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column frequencia_id: INTEGER
+5415 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+5416 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column frequencia_calibracao: VARCHAR(10)
+5416 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column condicao_id: INTEGER
+5416 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+5416 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column condicao_equipamento: VARCHAR(20)
+5417 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column condicao_data_inicio: DATE
+5417 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+5417 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+5417 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_tipo: VARCHAR(20)
+5418 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_empresa_codigo_laudo: VARCHAR(20)
+5418 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_data: DATE
+5418 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_aceita_por: VARCHAR(20)
+5418 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_observacao: VARCHAR(1000)
+5419 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_id: INTEGER
+5419 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+5419 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_sistema_medicao: VARCHAR(20)
+5419 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_valor_padrao: REAL
+5419 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_media_medicoes: REAL
+5419 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_incerteza_medicoes: REAL
+5420 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+5420 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_razao_social: VARCHAR(20)
+5420 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_cnpj: VARCHAR(18)
+5421 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_nome_fantasia: VARCHAR(20)
+5421 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+5421 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_endereco: VARCHAR(1000)
+5518 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+5518 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+5518 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+5518 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+5519 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+5519 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+5519 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_id: INTEGER
+5519 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_cpf: VARCHAR(14)
+5520 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_nome: VARCHAR(200)
+5520 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_email: VARCHAR(200)
+5520 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_id: INTEGER
+5520 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+5743 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+5744 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+5744 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+5744 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_descricao: VARCHAR(50)
+5744 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_modelo: VARCHAR(50)
+5744 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_numero_serie: VARCHAR(50)
+5744 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_faixa_medicao: VARCHAR(20)
+5745 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_menor_divisao: VARCHAR(10)
+5745 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_tolerancia: REAL
+5745 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column frequencia_id: INTEGER
+5745 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+5745 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column frequencia_calibracao: VARCHAR(10)
+5746 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+5746 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+5746 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_tipo: VARCHAR(20)
+5746 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_empresa_codigo_laudo: VARCHAR(20)
+5746 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_data: DATE
+5746 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_aceita_por: VARCHAR(20)
+5746 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_observacao: VARCHAR(1000)
+5747 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+5747 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_razao_social: VARCHAR(20)
+5747 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_cnpj: VARCHAR(18)
+5747 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_nome_fantasia: VARCHAR(20)
+5747 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+5748 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_endereco: VARCHAR(1000)
+5748 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+5748 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+5748 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+5748 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+5749 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+5749 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+5749 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_id: INTEGER
+5749 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_cpf: VARCHAR(14)
+5749 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_nome: VARCHAR(200)
+5749 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_email: VARCHAR(200)
+5750 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_id: INTEGER
+5750 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+2472378 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+2472379 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+2472379 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+2472379 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_descricao: VARCHAR(50)
+2472379 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_modelo: VARCHAR(50)
+2472379 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_numero_serie: VARCHAR(50)
+2472380 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_faixa_medicao: VARCHAR(20)
+2472380 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_menor_divisao: VARCHAR(10)
+2472380 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_tolerancia: REAL
+2472381 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column frequencia_id: INTEGER
+2472381 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+2472381 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column frequencia_calibracao: VARCHAR(10)
+2472381 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column condicao_id: INTEGER
+2472381 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+2472381 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column condicao_equipamento: VARCHAR(20)
+2472382 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column condicao_data_inicio: DATE
+2472382 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+2472382 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+2472382 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_tipo: VARCHAR(20)
+2472382 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_empresa_codigo_laudo: VARCHAR(20)
+2472382 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_data: DATE
+2472383 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_aceita_por: VARCHAR(20)
+2472383 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_observacao: VARCHAR(1000)
+2472383 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_id: INTEGER
+2472383 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+2472383 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_sistema_medicao: VARCHAR(20)
+2472383 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_valor_padrao: REAL
+2472384 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_media_medicoes: REAL
+2472384 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_incerteza_medicoes: REAL
+2472384 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+2472384 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_razao_social: VARCHAR(20)
+2472384 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_cnpj: VARCHAR(18)
+2472384 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_nome_fantasia: VARCHAR(20)
+2472385 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+2472385 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_endereco: VARCHAR(1000)
+2472385 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+2472385 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+2472385 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+2472386 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+2472386 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+2472386 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+2472386 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_id: INTEGER
+2472386 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_cpf: VARCHAR(14)
+2472387 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_nome: VARCHAR(200)
+2472387 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_email: VARCHAR(200)
+2472387 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_id: INTEGER
+2472387 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+2479568 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+CREATE TABLE pessoa (
+                pessoa_id INT AUTO_INCREMENT NOT NULL,
+                pessoa_cpf VARCHAR(14) NOT NULL,
+                pessoa_nome VARCHAR(200) NOT NULL,
+                pessoa_email VARCHAR(200) NOT NULL,
+                PRIMARY KEY (pessoa_id)
+)
+2479569 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+CREATE UNIQUE INDEX pessoa_cpf
+ ON pessoa
+ ( pessoa_cpf )
+2479570 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE TABLE anexo (
+                anexo_id INT AUTO_INCREMENT NOT NULL,
+                anexo_endereco VARCHAR(1000) NOT NULL,
+                PRIMARY KEY (anexo_id)
+)
+2479571 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+CREATE TABLE empresa (
+                empresa_id INT AUTO_INCREMENT NOT NULL,
+                empresa_razao_social VARCHAR(20) NOT NULL,
+                empresa_cnpj VARCHAR(18) NOT NULL,
+                empresa_nome_fantasia VARCHAR(20) NOT NULL,
+                PRIMARY KEY (empresa_id)
+)
+2479572 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+CREATE UNIQUE INDEX empresa_cnpj
+ ON empresa
+ ( empresa_cnpj )
+2479573 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE TABLE empresa_anexo (
+                empresa_id INT NOT NULL,
+                anexo_id INT NOT NULL,
+                PRIMARY KEY (empresa_id, anexo_id)
+)
+2479574 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+CREATE TABLE intervencao (
+                intervencao_id INT AUTO_INCREMENT NOT NULL,
+                empresa_id INT NOT NULL,
+                intervencao_tipo VARCHAR(20) NOT NULL,
+                intervencao_empresa_codigo_laudo VARCHAR(20) NOT NULL,
+                intervencao_data DATE NOT NULL,
+                intervencao_aceita_por VARCHAR(20) NOT NULL,
+                intervencao_observacao VARCHAR(1000) NOT NULL,
+                PRIMARY KEY (intervencao_id)
+)
+2479574 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+CREATE TABLE intervencao_anexo (
+                anexo_id INT NOT NULL,
+                intervencao_id INT NOT NULL,
+                PRIMARY KEY (anexo_id, intervencao_id)
+)
+2479574 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+CREATE TABLE laudo_intervencao (
+                laudo_intervencao_id INT AUTO_INCREMENT NOT NULL,
+                intervencao_id INT NOT NULL,
+                laudo_intervencao_sistema_medicao VARCHAR(20) NOT NULL,
+                laudo_intervencao_valor_padrao DOUBLE PRECISION NOT NULL,
+                laudo_intervencao_media_medicoes DOUBLE PRECISION NOT NULL,
+                laudo_intervencao_incerteza_medicoes DOUBLE PRECISION NOT NULL,
+                PRIMARY KEY (laudo_intervencao_id)
+)
+2479575 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+CREATE TABLE equipamento (
+                equipamento_id INT AUTO_INCREMENT NOT NULL,
+                empresa_id INT NOT NULL,
+                intervencao_id INT NOT NULL,
+                equipamento_descricao VARCHAR(50) NOT NULL,
+                equipamento_modelo VARCHAR(50) NOT NULL,
+                equipamento_numero_serie VARCHAR(50) NOT NULL,
+                equipamento_faixa_medicao VARCHAR(20) NOT NULL,
+                equipamento_menor_divisao VARCHAR(10) NOT NULL,
+                equipamento_tolerancia DOUBLE PRECISION NOT NULL,
+                PRIMARY KEY (equipamento_id)
+)
+2479575 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE equipamento MODIFY COLUMN equipamento_id INTEGER COMMENT 'Identificação do equipamento.'
+2479575 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE equipamento MODIFY COLUMN equipamento_descricao VARCHAR(50) COMMENT 'Breve descrição do equipamento.'
+2479575 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE equipamento MODIFY COLUMN equipamento_modelo VARCHAR(50) COMMENT 'Modelo do equipamento'
+2479576 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+CREATE TABLE equipamento_pessoa (
+                pessoa_id INT NOT NULL,
+                equipamento_id INT NOT NULL,
+                PRIMARY KEY (pessoa_id, equipamento_id)
+)
+2479576 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE equipamento_pessoa MODIFY COLUMN equipamento_id INTEGER COMMENT 'Identificação do equipamento.'
+2479576 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+CREATE TABLE equipamento_anexo (
+                anexo_id INT NOT NULL,
+                equipamento_id INT NOT NULL,
+                PRIMARY KEY (anexo_id, equipamento_id)
+)
+2479577 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE equipamento_anexo MODIFY COLUMN equipamento_id INTEGER COMMENT 'Identificação do equipamento.'
+2479577 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+CREATE TABLE condicao (
+                condicao_id INT AUTO_INCREMENT NOT NULL,
+                equipamento_id INT NOT NULL,
+                condicao_equipamento VARCHAR(20) NOT NULL,
+                condicao_data_inicio DATE NOT NULL,
+                PRIMARY KEY (condicao_id)
+)
+2479577 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE condicao MODIFY COLUMN equipamento_id INTEGER COMMENT 'Identificação do equipamento.'
+2479577 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+CREATE TABLE frequencia (
+                frequencia_id INT AUTO_INCREMENT NOT NULL,
+                equipamento_id INT NOT NULL,
+                frequencia_calibracao VARCHAR(10) NOT NULL,
+                PRIMARY KEY (frequencia_id)
+)
+2479578 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE frequencia MODIFY COLUMN equipamento_id INTEGER COMMENT 'Identificação do equipamento.'
+2479578 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+ALTER TABLE equipamento_pessoa ADD CONSTRAINT pessoa_equipamento_pessoa_fk
+FOREIGN KEY (pessoa_id)
+REFERENCES pessoa (pessoa_id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+2479578 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE empresa_anexo ADD CONSTRAINT anexo_empresa_anexo_fk
+FOREIGN KEY (anexo_id)
+REFERENCES anexo (anexo_id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+2479579 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE equipamento_anexo ADD CONSTRAINT anexo_equipamento_anexo_fk
+FOREIGN KEY (anexo_id)
+REFERENCES anexo (anexo_id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+2479579 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE intervencao_anexo ADD CONSTRAINT anexo_intervencao_anexo_fk
+FOREIGN KEY (anexo_id)
+REFERENCES anexo (anexo_id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+2479579 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE intervencao ADD CONSTRAINT empresa_intervencao_fk
+FOREIGN KEY (empresa_id)
+REFERENCES empresa (empresa_id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+2479580 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE equipamento ADD CONSTRAINT empresa_equipamento_fk
+FOREIGN KEY (empresa_id)
+REFERENCES empresa (empresa_id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+2479580 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE empresa_anexo ADD CONSTRAINT empresa_empresa_anexo_fk
+FOREIGN KEY (empresa_id)
+REFERENCES empresa (empresa_id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+2479580 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE laudo_intervencao ADD CONSTRAINT intervencao_laudo_intervencao_fk
+FOREIGN KEY (intervencao_id)
+REFERENCES intervencao (intervencao_id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+2479581 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE equipamento ADD CONSTRAINT intervencao_equipamento_fk
+FOREIGN KEY (intervencao_id)
+REFERENCES intervencao (intervencao_id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+2479581 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE intervencao_anexo ADD CONSTRAINT intervencao_intervencao_anexo_fk
+FOREIGN KEY (intervencao_id)
+REFERENCES intervencao (intervencao_id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+2479581 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE frequencia ADD CONSTRAINT equipamento_frequencia_calibracao_fk
+FOREIGN KEY (equipamento_id)
+REFERENCES equipamento (equipamento_id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+2479582 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE condicao ADD CONSTRAINT equipamento_condicao_fk
+FOREIGN KEY (equipamento_id)
+REFERENCES equipamento (equipamento_id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+2479582 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE equipamento_anexo ADD CONSTRAINT equipamento_equipamento_anexo_fk
+FOREIGN KEY (equipamento_id)
+REFERENCES equipamento (equipamento_id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+2479582 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE equipamento_pessoa ADD CONSTRAINT equipamento_equipamento_pessoa_fk
+FOREIGN KEY (equipamento_id)
+REFERENCES equipamento (equipamento_id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+2479607 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - The list size is :35
+2588378 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_id: INTEGER
+2588379 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_cpf: VARCHAR(14)
+2588379 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_nome: VARCHAR(200)
+2588380 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_email: VARCHAR(200)
+2590355 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_id: INTEGER
+2590355 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_cpf: VARCHAR(14)
+2590356 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_nome: VARCHAR(200)
+2590356 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_email: VARCHAR(200)
+2590456 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+2590457 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+2590457 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+2590458 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_descricao: VARCHAR(50)
+2590458 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_modelo: VARCHAR(50)
+2590458 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_numero_serie: VARCHAR(50)
+2590459 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_faixa_medicao: VARCHAR(20)
+2590459 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_menor_divisao: VARCHAR(10)
+2590459 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_tolerancia: REAL
+2590460 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column frequencia_id: INTEGER
+2590460 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+2590461 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column frequencia_calibracao: VARCHAR(10)
+2590461 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column condicao_id: INTEGER
+2590462 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+2590462 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column condicao_equipamento: VARCHAR(20)
+2590463 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column condicao_data_inicio: DATE
+2590463 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+2590464 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+2590464 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_tipo: VARCHAR(20)
+2590464 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_empresa_codigo_laudo: VARCHAR(20)
+2590465 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_data: DATE
+2590465 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_aceita_por: VARCHAR(20)
+2590465 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_observacao: VARCHAR(1000)
+2590466 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_id: INTEGER
+2590466 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+2590467 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_sistema_medicao: VARCHAR(20)
+2590467 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_valor_padrao: REAL
+2590467 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_media_medicoes: REAL
+2590468 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_incerteza_medicoes: REAL
+2590468 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+2590469 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_razao_social: VARCHAR(20)
+2590469 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_cnpj: VARCHAR(18)
+2590469 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_nome_fantasia: VARCHAR(20)
+2590470 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+2590470 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_endereco: VARCHAR(1000)
+2590471 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+2590471 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+2590472 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+2590472 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+2590473 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+2590473 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+2590473 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_id: INTEGER
+2590474 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_cpf: VARCHAR(14)
+2590474 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_nome: VARCHAR(200)
+2590475 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_email: VARCHAR(200)
+2590475 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_id: INTEGER
+2590475 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+2597460 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_id: INTEGER
+2597460 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_cpf: VARCHAR(14)
+2597460 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_nome: VARCHAR(200)
+2597460 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_email: VARCHAR(200)
+2620080 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+CREATE TABLE pessoa (
+                pessoa_id IDENTITY NOT NULL,
+                pessoa_cpf VARCHAR(14) NOT NULL,
+                pessoa_nome VARCHAR(200) NOT NULL,
+                pessoa_email VARCHAR(200) NOT NULL,
+                CONSTRAINT pessoa_id PRIMARY KEY (pessoa_id)
+)
+2620081 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE UNIQUE INDEX pessoa_cpf
+ ON pessoa
+ ( pessoa_cpf )
+2620082 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE TABLE anexo (
+                anexo_id IDENTITY NOT NULL,
+                anexo_endereco VARCHAR(1000) NOT NULL,
+                CONSTRAINT anexo_id PRIMARY KEY (anexo_id)
+)
+2620096 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE TABLE empresa (
+                empresa_id IDENTITY NOT NULL,
+                empresa_razao_social VARCHAR(20) NOT NULL,
+                empresa_cnpj VARCHAR(18) NOT NULL,
+                empresa_nome_fantasia VARCHAR(20) NOT NULL,
+                CONSTRAINT empresa_id PRIMARY KEY (empresa_id)
+)
+2620096 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE UNIQUE INDEX empresa_cnpj
+ ON empresa
+ ( empresa_cnpj )
+2620097 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE TABLE empresa_anexo (
+                empresa_id INTEGER NOT NULL,
+                anexo_id INTEGER NOT NULL,
+                CONSTRAINT empresa_anexo_id PRIMARY KEY (empresa_id, anexo_id)
+)
+2620097 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE TABLE intervencao (
+                intervencao_id IDENTITY NOT NULL,
+                empresa_id INTEGER NOT NULL,
+                intervencao_tipo VARCHAR(20) NOT NULL,
+                intervencao_empresa_codigo_laudo VARCHAR(20) NOT NULL,
+                intervencao_data DATE NOT NULL,
+                intervencao_aceita_por VARCHAR(20) NOT NULL,
+                intervencao_observacao VARCHAR(1000) NOT NULL,
+                CONSTRAINT intervencao_id PRIMARY KEY (intervencao_id)
+)
+2620097 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE TABLE intervencao_anexo (
+                anexo_id INTEGER NOT NULL,
+                intervencao_id INTEGER NOT NULL,
+                CONSTRAINT intervencao_anexo_id PRIMARY KEY (anexo_id, intervencao_id)
+)
+2620098 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE TABLE laudo_intervencao (
+                laudo_intervencao_id IDENTITY NOT NULL,
+                intervencao_id INTEGER NOT NULL,
+                laudo_intervencao_sistema_medicao VARCHAR(20) NOT NULL,
+                laudo_intervencao_valor_padrao REAL NOT NULL,
+                laudo_intervencao_media_medicoes REAL NOT NULL,
+                laudo_intervencao_incerteza_medicoes REAL NOT NULL,
+                CONSTRAINT laudo_intervencao_id PRIMARY KEY (laudo_intervencao_id)
+)
+2620098 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE TABLE equipamento (
+                equipamento_id IDENTITY NOT NULL,
+                empresa_id INTEGER NOT NULL,
+                intervencao_id INTEGER NOT NULL,
+                equipamento_descricao VARCHAR(50) NOT NULL,
+                equipamento_modelo VARCHAR(50) NOT NULL,
+                equipamento_numero_serie VARCHAR(50) NOT NULL,
+                equipamento_faixa_medicao VARCHAR(20) NOT NULL,
+                equipamento_menor_divisao VARCHAR(10) NOT NULL,
+                equipamento_tolerancia REAL NOT NULL,
+                CONSTRAINT equipamento_id PRIMARY KEY (equipamento_id)
+)
+2620099 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE TABLE equipamento_pessoa (
+                pessoa_id INTEGER NOT NULL,
+                equipamento_id INTEGER NOT NULL,
+                CONSTRAINT equipamento_pessoa_id PRIMARY KEY (pessoa_id, equipamento_id)
+)
+2620099 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE TABLE equipamento_anexo (
+                anexo_id INTEGER NOT NULL,
+                equipamento_id INTEGER NOT NULL,
+                CONSTRAINT equipamento_anexo_id PRIMARY KEY (anexo_id, equipamento_id)
+)
+2620099 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE TABLE condicao (
+                condicao_id IDENTITY NOT NULL,
+                equipamento_id INTEGER NOT NULL,
+                condicao_equipamento VARCHAR(20) NOT NULL,
+                condicao_data_inicio DATE NOT NULL,
+                CONSTRAINT condicao_id PRIMARY KEY (condicao_id)
+)
+2620100 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE TABLE frequencia (
+                frequencia_id IDENTITY NOT NULL,
+                equipamento_id INTEGER NOT NULL,
+                frequencia_calibracao VARCHAR(10) NOT NULL,
+                CONSTRAINT frequencia_id PRIMARY KEY (frequencia_id)
+)
+2620101 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE equipamento_pessoa ADD CONSTRAINT pessoa_equipamento_pessoa_fk
+FOREIGN KEY (pessoa_id)
+REFERENCES pessoa (pessoa_id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+2620101 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE empresa_anexo ADD CONSTRAINT anexo_empresa_anexo_fk
+FOREIGN KEY (anexo_id)
+REFERENCES anexo (anexo_id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+2620102 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE equipamento_anexo ADD CONSTRAINT anexo_equipamento_anexo_fk
+FOREIGN KEY (anexo_id)
+REFERENCES anexo (anexo_id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+2620102 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE intervencao_anexo ADD CONSTRAINT anexo_intervencao_anexo_fk
+FOREIGN KEY (anexo_id)
+REFERENCES anexo (anexo_id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+2620102 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE intervencao ADD CONSTRAINT empresa_intervencao_fk
+FOREIGN KEY (empresa_id)
+REFERENCES empresa (empresa_id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+2620103 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE equipamento ADD CONSTRAINT empresa_equipamento_fk
+FOREIGN KEY (empresa_id)
+REFERENCES empresa (empresa_id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+2620103 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE empresa_anexo ADD CONSTRAINT empresa_empresa_anexo_fk
+FOREIGN KEY (empresa_id)
+REFERENCES empresa (empresa_id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+2620103 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE laudo_intervencao ADD CONSTRAINT intervencao_laudo_intervencao_fk
+FOREIGN KEY (intervencao_id)
+REFERENCES intervencao (intervencao_id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+2620104 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE equipamento ADD CONSTRAINT intervencao_equipamento_fk
+FOREIGN KEY (intervencao_id)
+REFERENCES intervencao (intervencao_id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+2620104 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE intervencao_anexo ADD CONSTRAINT intervencao_intervencao_anexo_fk
+FOREIGN KEY (intervencao_id)
+REFERENCES intervencao (intervencao_id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+2620105 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE frequencia ADD CONSTRAINT equipamento_frequencia_calibracao_fk
+FOREIGN KEY (equipamento_id)
+REFERENCES equipamento (equipamento_id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+2620106 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE condicao ADD CONSTRAINT equipamento_condicao_fk
+FOREIGN KEY (equipamento_id)
+REFERENCES equipamento (equipamento_id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+2620106 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE equipamento_anexo ADD CONSTRAINT equipamento_equipamento_anexo_fk
+FOREIGN KEY (equipamento_id)
+REFERENCES equipamento (equipamento_id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+2620106 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE equipamento_pessoa ADD CONSTRAINT equipamento_equipamento_pessoa_fk
+FOREIGN KEY (equipamento_id)
+REFERENCES equipamento (equipamento_id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+2620107 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - The list size is :28
+2837825 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: <changeSet author="Vitor" id="1">
+<createTable tableName="pessoa">
+  <column name="pessoa_id" type="INTEGER" autoIncrement="true">
+    <constraints nullable="false"/>
+  </column>
+  <column name="pessoa_cpf" type="VARCHAR(14)">
+    <constraints nullable="false"/>
+  </column>
+  <column name="pessoa_nome" type="VARCHAR(200)">
+    <constraints nullable="false"/>
+  </column>
+  <column name="pessoa_email" type="VARCHAR(200)">
+    <constraints nullable="false"/>
+  </column>
+</createTable>
+</changeSet>
+<changeSet author="Vitor" id="2">
+<addPrimaryKey tableName="pessoa" constraintName="pessoa_id" columnNames="pessoa_id"/>
+</changeSet>
+<changeSet author="Vitor" id="3">
+<createSequence sequenceName="pessoa_pessoa_id_seq"/>
+</changeSet>
+
+2837826 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+<changeSet author="Vitor" id="4">
+<createIndex tableName="pessoa" indexName="pessoa_cpf" unique="true">
+  <column name="pessoa_cpf"/>
+</createIndex>
+</changeSet>
+
+2837826 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+<changeSet author="Vitor" id="5">
+<createTable tableName="anexo">
+  <column name="anexo_id" type="INTEGER" autoIncrement="true">
+    <constraints nullable="false"/>
+  </column>
+  <column name="anexo_endereco" type="VARCHAR(1000)">
+    <constraints nullable="false"/>
+  </column>
+</createTable>
+</changeSet>
+<changeSet author="Vitor" id="6">
+<addPrimaryKey tableName="anexo" constraintName="anexo_id" columnNames="anexo_id"/>
+</changeSet>
+<changeSet author="Vitor" id="7">
+<createSequence sequenceName="anexo_anexo_id_seq"/>
+</changeSet>
+
+2837826 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+<changeSet author="Vitor" id="8">
+<createTable tableName="empresa">
+  <column name="empresa_id" type="INTEGER" autoIncrement="true">
+    <constraints nullable="false"/>
+  </column>
+  <column name="empresa_razao_social" type="VARCHAR(20)">
+    <constraints nullable="false"/>
+  </column>
+  <column name="empresa_cnpj" type="VARCHAR(18)">
+    <constraints nullable="false"/>
+  </column>
+  <column name="empresa_nome_fantasia" type="VARCHAR(20)">
+    <constraints nullable="false"/>
+  </column>
+</createTable>
+</changeSet>
+<changeSet author="Vitor" id="9">
+<addPrimaryKey tableName="empresa" constraintName="empresa_id" columnNames="empresa_id"/>
+</changeSet>
+<changeSet author="Vitor" id="10">
+<createSequence sequenceName="empresa_empresa_id_seq"/>
+</changeSet>
+
+2837826 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+<changeSet author="Vitor" id="11">
+<createIndex tableName="empresa" indexName="empresa_cnpj" unique="true">
+  <column name="empresa_cnpj"/>
+</createIndex>
+</changeSet>
+
+2837826 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+<changeSet author="Vitor" id="12">
+<createTable tableName="empresa_anexo">
+  <column name="empresa_id" type="INTEGER">
+    <constraints nullable="false"/>
+  </column>
+  <column name="anexo_id" type="INTEGER">
+    <constraints nullable="false"/>
+  </column>
+</createTable>
+</changeSet>
+
+2837827 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+<changeSet author="Vitor" id="13">
+<createTable tableName="intervencao">
+  <column name="intervencao_id" type="INTEGER" autoIncrement="true">
+    <constraints nullable="false"/>
+  </column>
+  <column name="empresa_id" type="INTEGER">
+    <constraints nullable="false"/>
+  </column>
+  <column name="intervencao_tipo" type="VARCHAR(20)">
+    <constraints nullable="false"/>
+  </column>
+  <column name="intervencao_empresa_codigo_laudo" type="VARCHAR(20)">
+    <constraints nullable="false"/>
+  </column>
+  <column name="intervencao_data" type="DATE">
+    <constraints nullable="false"/>
+  </column>
+  <column name="intervencao_aceita_por" type="VARCHAR(20)">
+    <constraints nullable="false"/>
+  </column>
+  <column name="intervencao_observacao" type="VARCHAR(1000)">
+    <constraints nullable="false"/>
+  </column>
+</createTable>
+</changeSet>
+<changeSet author="Vitor" id="14">
+<addPrimaryKey tableName="intervencao" constraintName="intervencao_id" columnNames="intervencao_id"/>
+</changeSet>
+<changeSet author="Vitor" id="15">
+<createSequence sequenceName="intervencao_intervencao_id_seq"/>
+</changeSet>
+
+2837827 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+<changeSet author="Vitor" id="16">
+<createTable tableName="intervencao_anexo">
+  <column name="anexo_id" type="INTEGER">
+    <constraints nullable="false"/>
+  </column>
+  <column name="intervencao_id" type="INTEGER">
+    <constraints nullable="false"/>
+  </column>
+</createTable>
+</changeSet>
+
+2837827 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+<changeSet author="Vitor" id="17">
+<createTable tableName="laudo_intervencao">
+  <column name="laudo_intervencao_id" type="INTEGER" autoIncrement="true">
+    <constraints nullable="false"/>
+  </column>
+  <column name="intervencao_id" type="INTEGER">
+    <constraints nullable="false"/>
+  </column>
+  <column name="laudo_intervencao_sistema_medicao" type="VARCHAR(20)">
+    <constraints nullable="false"/>
+  </column>
+  <column name="laudo_intervencao_valor_padrao" type="REAL">
+    <constraints nullable="false"/>
+  </column>
+  <column name="laudo_intervencao_media_medicoes" type="REAL">
+    <constraints nullable="false"/>
+  </column>
+  <column name="laudo_intervencao_incerteza_medicoes" type="REAL">
+    <constraints nullable="false"/>
+  </column>
+</createTable>
+</changeSet>
+<changeSet author="Vitor" id="18">
+<addPrimaryKey tableName="laudo_intervencao" constraintName="laudo_intervencao_id" columnNames="laudo_intervencao_id"/>
+</changeSet>
+<changeSet author="Vitor" id="19">
+<createSequence sequenceName="laudo_intervencao_laudo_intervencao_id_seq"/>
+</changeSet>
+
+2837827 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+<changeSet author="Vitor" id="20">
+<createTable tableName="equipamento">
+  <column name="equipamento_id" type="INTEGER" remarks="Identifica&#231;&#227;o do equipamento." autoIncrement="true">
+    <constraints nullable="false"/>
+  </column>
+  <column name="empresa_id" type="INTEGER">
+    <constraints nullable="false"/>
+  </column>
+  <column name="intervencao_id" type="INTEGER">
+    <constraints nullable="false"/>
+  </column>
+  <column name="equipamento_descricao" type="VARCHAR(50)" remarks="Breve descri&#231;&#227;o do equipamento.">
+    <constraints nullable="false"/>
+  </column>
+  <column name="equipamento_modelo" type="VARCHAR(50)" remarks="Modelo do equipamento">
+    <constraints nullable="false"/>
+  </column>
+  <column name="equipamento_numero_serie" type="VARCHAR(50)">
+    <constraints nullable="false"/>
+  </column>
+  <column name="equipamento_faixa_medicao" type="VARCHAR(20)">
+    <constraints nullable="false"/>
+  </column>
+  <column name="equipamento_menor_divisao" type="VARCHAR(10)">
+    <constraints nullable="false"/>
+  </column>
+  <column name="equipamento_tolerancia" type="REAL">
+    <constraints nullable="false"/>
+  </column>
+</createTable>
+</changeSet>
+<changeSet author="Vitor" id="21">
+<addPrimaryKey tableName="equipamento" constraintName="equipamento_id" columnNames="equipamento_id"/>
+</changeSet>
+<changeSet author="Vitor" id="22">
+<createSequence sequenceName="equipamento_equipamento_id_seq"/>
+</changeSet>
+
+2837828 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+<changeSet author="Vitor" id="23">
+<createTable tableName="equipamento_pessoa">
+  <column name="pessoa_id" type="INTEGER">
+    <constraints nullable="false"/>
+  </column>
+  <column name="equipamento_id" type="INTEGER" remarks="Identifica&#231;&#227;o do equipamento.">
+    <constraints nullable="false"/>
+  </column>
+</createTable>
+</changeSet>
+
+2837828 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+<changeSet author="Vitor" id="24">
+<createTable tableName="equipamento_anexo">
+  <column name="anexo_id" type="INTEGER">
+    <constraints nullable="false"/>
+  </column>
+  <column name="equipamento_id" type="INTEGER" remarks="Identifica&#231;&#227;o do equipamento.">
+    <constraints nullable="false"/>
+  </column>
+</createTable>
+</changeSet>
+
+2837828 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+<changeSet author="Vitor" id="25">
+<createTable tableName="condicao">
+  <column name="condicao_id" type="INTEGER" autoIncrement="true">
+    <constraints nullable="false"/>
+  </column>
+  <column name="equipamento_id" type="INTEGER" remarks="Identifica&#231;&#227;o do equipamento.">
+    <constraints nullable="false"/>
+  </column>
+  <column name="condicao_equipamento" type="VARCHAR(20)">
+    <constraints nullable="false"/>
+  </column>
+  <column name="condicao_data_inicio" type="DATE">
+    <constraints nullable="false"/>
+  </column>
+</createTable>
+</changeSet>
+<changeSet author="Vitor" id="26">
+<addPrimaryKey tableName="condicao" constraintName="condicao_id" columnNames="condicao_id"/>
+</changeSet>
+<changeSet author="Vitor" id="27">
+<createSequence sequenceName="condicao_condicao_id_seq"/>
+</changeSet>
+
+2837828 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+<changeSet author="Vitor" id="28">
+<createTable tableName="frequencia">
+  <column name="frequencia_id" type="INTEGER" autoIncrement="true">
+    <constraints nullable="false"/>
+  </column>
+  <column name="equipamento_id" type="INTEGER" remarks="Identifica&#231;&#227;o do equipamento.">
+    <constraints nullable="false"/>
+  </column>
+  <column name="frequencia_calibracao" type="VARCHAR(10)">
+    <constraints nullable="false"/>
+  </column>
+</createTable>
+</changeSet>
+<changeSet author="Vitor" id="29">
+<addPrimaryKey tableName="frequencia" constraintName="frequencia_id" columnNames="frequencia_id"/>
+</changeSet>
+<changeSet author="Vitor" id="30">
+<createSequence sequenceName="frequencia_frequencia_id_seq"/>
+</changeSet>
+
+2837829 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+<changeSet author="Vitor" id="31">
+<addForeignKeyConstraint baseTableName="equipamento_pessoa" constraintName="pessoa_equipamento_pessoa_fk" baseColumnNames="pessoa_id" referencedTableName="pessoa" referencedColumnNames="pessoa_id"/>
+</changeSet>
+
+2837829 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+<changeSet author="Vitor" id="32">
+<addForeignKeyConstraint baseTableName="empresa_anexo" constraintName="anexo_empresa_anexo_fk" baseColumnNames="anexo_id" referencedTableName="anexo" referencedColumnNames="anexo_id"/>
+</changeSet>
+
+2837829 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+<changeSet author="Vitor" id="33">
+<addForeignKeyConstraint baseTableName="equipamento_anexo" constraintName="anexo_equipamento_anexo_fk" baseColumnNames="anexo_id" referencedTableName="anexo" referencedColumnNames="anexo_id"/>
+</changeSet>
+
+2837830 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+<changeSet author="Vitor" id="34">
+<addForeignKeyConstraint baseTableName="intervencao_anexo" constraintName="anexo_intervencao_anexo_fk" baseColumnNames="anexo_id" referencedTableName="anexo" referencedColumnNames="anexo_id"/>
+</changeSet>
+
+2837830 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+<changeSet author="Vitor" id="35">
+<addForeignKeyConstraint baseTableName="intervencao" constraintName="empresa_intervencao_fk" baseColumnNames="empresa_id" referencedTableName="empresa" referencedColumnNames="empresa_id"/>
+</changeSet>
+
+2837830 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+<changeSet author="Vitor" id="36">
+<addForeignKeyConstraint baseTableName="equipamento" constraintName="empresa_equipamento_fk" baseColumnNames="empresa_id" referencedTableName="empresa" referencedColumnNames="empresa_id"/>
+</changeSet>
+
+2837830 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+<changeSet author="Vitor" id="37">
+<addForeignKeyConstraint baseTableName="empresa_anexo" constraintName="empresa_empresa_anexo_fk" baseColumnNames="empresa_id" referencedTableName="empresa" referencedColumnNames="empresa_id"/>
+</changeSet>
+
+2837830 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+<changeSet author="Vitor" id="38">
+<addForeignKeyConstraint baseTableName="laudo_intervencao" constraintName="intervencao_laudo_intervencao_fk" baseColumnNames="intervencao_id" referencedTableName="intervencao" referencedColumnNames="intervencao_id"/>
+</changeSet>
+
+2837831 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+<changeSet author="Vitor" id="39">
+<addForeignKeyConstraint baseTableName="equipamento" constraintName="intervencao_equipamento_fk" baseColumnNames="intervencao_id" referencedTableName="intervencao" referencedColumnNames="intervencao_id"/>
+</changeSet>
+
+2837831 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+<changeSet author="Vitor" id="40">
+<addForeignKeyConstraint baseTableName="intervencao_anexo" constraintName="intervencao_intervencao_anexo_fk" baseColumnNames="intervencao_id" referencedTableName="intervencao" referencedColumnNames="intervencao_id"/>
+</changeSet>
+
+2837831 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+<changeSet author="Vitor" id="41">
+<addForeignKeyConstraint baseTableName="frequencia" constraintName="equipamento_frequencia_calibracao_fk" baseColumnNames="equipamento_id" referencedTableName="equipamento" referencedColumnNames="equipamento_id"/>
+</changeSet>
+
+2837831 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+<changeSet author="Vitor" id="42">
+<addForeignKeyConstraint baseTableName="condicao" constraintName="equipamento_condicao_fk" baseColumnNames="equipamento_id" referencedTableName="equipamento" referencedColumnNames="equipamento_id"/>
+</changeSet>
+
+2837832 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+<changeSet author="Vitor" id="43">
+<addForeignKeyConstraint baseTableName="equipamento_anexo" constraintName="equipamento_equipamento_anexo_fk" baseColumnNames="equipamento_id" referencedTableName="equipamento" referencedColumnNames="equipamento_id"/>
+</changeSet>
+
+2837832 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+<changeSet author="Vitor" id="44">
+<addForeignKeyConstraint baseTableName="equipamento_pessoa" constraintName="equipamento_equipamento_pessoa_fk" baseColumnNames="equipamento_id" referencedTableName="equipamento" referencedColumnNames="equipamento_id"/>
+</changeSet>
+
+2837833 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - The list size is :28
+3611453 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+3611453 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+3611453 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+3611454 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_descricao: VARCHAR(50)
+3611454 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_modelo: VARCHAR(50)
+3611454 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_numero_serie: VARCHAR(50)
+3611454 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_faixa_medicao: VARCHAR(20)
+3611454 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_menor_divisao: VARCHAR(10)
+3611454 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_tolerancia: REAL
+3611454 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column frequencia_id: INTEGER
+3611455 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+3611455 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column frequencia_calibracao: VARCHAR(10)
+3611455 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column condicao_id: INTEGER
+3611455 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+3611455 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column condicao_equipamento: VARCHAR(20)
+3611455 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column condicao_data_inicio: DATE
+3611455 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+3611456 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+3611456 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_tipo: VARCHAR(20)
+3611456 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_empresa_codigo_laudo: VARCHAR(20)
+3611456 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_data: DATE
+3611456 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_aceita_por: VARCHAR(20)
+3611456 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_observacao: VARCHAR(1000)
+3611456 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_id: INTEGER
+3611456 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+3611457 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_sistema_medicao: VARCHAR(20)
+3611457 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_valor_padrao: REAL
+3611457 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_media_medicoes: REAL
+3611457 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_incerteza_medicoes: REAL
+3611457 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+3611457 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_razao_social: VARCHAR(20)
+3611457 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_cnpj: VARCHAR(18)
+3611458 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_nome_fantasia: VARCHAR(20)
+3611458 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+3611458 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_endereco: VARCHAR(1000)
+3611458 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+3611458 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+3611458 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+3611459 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+3611459 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+3611459 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+3611459 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_id: INTEGER
+3611459 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_cpf: VARCHAR(14)
+3611459 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_nome: VARCHAR(200)
+3611460 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_email: VARCHAR(200)
+3611460 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_id: INTEGER
+3611460 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+5137305 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+5137305 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+5137306 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+5137306 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_descricao: VARCHAR(50)
+5137307 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_modelo: VARCHAR(50)
+5137307 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_numero_serie: VARCHAR(50)
+5137307 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_faixa_medicao: VARCHAR(20)
+5137308 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_menor_divisao: VARCHAR(10)
+5137308 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_tolerancia: REAL
+5137309 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column frequencia_id: INTEGER
+5137309 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+5137309 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column frequencia_calibracao: VARCHAR(10)
+5137310 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column condicao_id: INTEGER
+5137310 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+5137311 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column condicao_equipamento: VARCHAR(20)
+5137311 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column condicao_data_inicio: DATE
+5137312 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+5137312 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+5137312 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_tipo: VARCHAR(20)
+5137313 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_empresa_codigo_laudo: VARCHAR(20)
+5137313 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_data: DATE
+5137313 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_aceita_por: VARCHAR(20)
+5137314 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_observacao: VARCHAR(1000)
+5137314 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_id: INTEGER
+5137315 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+5137315 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_sistema_medicao: VARCHAR(20)
+5137316 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_valor_padrao: REAL
+5137316 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_media_medicoes: REAL
+5137316 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_incerteza_medicoes: REAL
+5137317 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+5137317 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_razao_social: VARCHAR(20)
+5137317 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_cnpj: VARCHAR(18)
+5137318 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_nome_fantasia: VARCHAR(20)
+5137318 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+5137319 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_endereco: VARCHAR(1000)
+5137320 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+5137320 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+5137320 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+5137321 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+5137321 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+5137322 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+5137322 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_id: INTEGER
+5137323 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_cpf: VARCHAR(14)
+5137323 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_nome: VARCHAR(200)
+5137323 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_email: VARCHAR(200)
+5137324 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_id: INTEGER
+5137324 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+5137369 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+5137370 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+5137371 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+5137371 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_descricao: VARCHAR(50)
+5137371 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_modelo: VARCHAR(50)
+5137372 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_numero_serie: VARCHAR(50)
+5137372 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_faixa_medicao: VARCHAR(20)
+5137373 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_menor_divisao: VARCHAR(10)
+5137373 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_tolerancia: REAL
+5137373 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column frequencia_id: INTEGER
+5137374 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+5137374 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column frequencia_calibracao: VARCHAR(10)
+5137375 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column condicao_id: INTEGER
+5137375 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+5137375 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column condicao_equipamento: VARCHAR(20)
+5137376 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column condicao_data_inicio: DATE
+5137376 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+5137377 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+5137377 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_tipo: VARCHAR(20)
+5137378 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_empresa_codigo_laudo: VARCHAR(20)
+5137378 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_data: DATE
+5137378 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_aceita_por: VARCHAR(20)
+5137379 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_observacao: VARCHAR(1000)
+5137379 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_id: INTEGER
+5137380 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+5137380 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_sistema_medicao: VARCHAR(20)
+5137380 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_valor_padrao: REAL
+5137381 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_media_medicoes: REAL
+5137381 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_incerteza_medicoes: REAL
+5137382 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+5137382 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_razao_social: VARCHAR(20)
+5137382 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_cnpj: VARCHAR(18)
+5137383 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_nome_fantasia: VARCHAR(20)
+5137383 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+5137384 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_endereco: VARCHAR(1000)
+5137384 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+5137384 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+5137385 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+5137386 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+5137386 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+5137386 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+5137387 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_id: INTEGER
+5137387 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_cpf: VARCHAR(14)
+5137388 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_nome: VARCHAR(200)
+5137388 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_email: VARCHAR(200)
+5137389 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_id: INTEGER
+5137389 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+5137595 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+5137595 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+5137595 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+5137595 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_descricao: VARCHAR(50)
+5137595 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_modelo: VARCHAR(50)
+5137595 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_numero_serie: VARCHAR(50)
+5137595 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_faixa_medicao: VARCHAR(20)
+5137596 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_menor_divisao: VARCHAR(10)
+5137596 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_tolerancia: REAL
+5137596 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column frequencia_id: INTEGER
+5137596 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+5137596 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column frequencia_calibracao: VARCHAR(10)
+5137596 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column condicao_id: INTEGER
+5137597 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+5137597 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column condicao_equipamento: VARCHAR(20)
+5137597 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column condicao_data_inicio: DATE
+5137597 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+5137597 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+5137597 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_tipo: VARCHAR(20)
+5137597 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_empresa_codigo_laudo: VARCHAR(20)
+5137598 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_data: DATE
+5137598 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_aceita_por: VARCHAR(20)
+5137598 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_observacao: VARCHAR(1000)
+5137598 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_id: INTEGER
+5137598 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+5137598 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_sistema_medicao: VARCHAR(20)
+5137599 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_valor_padrao: REAL
+5137599 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_media_medicoes: REAL
+5137599 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_incerteza_medicoes: REAL
+5137599 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+5137599 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_razao_social: VARCHAR(20)
+5137599 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_cnpj: VARCHAR(18)
+5137599 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_nome_fantasia: VARCHAR(20)
+5137600 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+5137600 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_endereco: VARCHAR(1000)
+5137600 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+5137600 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+5137600 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+5137600 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+5137602 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+5137602 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+5137602 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_id: INTEGER
+5137603 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_cpf: VARCHAR(14)
+5137603 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_nome: VARCHAR(200)
+5137603 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_email: VARCHAR(200)
+5137603 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_id: INTEGER
+5137603 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+5141557 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+5141557 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+5141557 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+5141557 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_descricao: VARCHAR(50)
+5141558 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_modelo: VARCHAR(50)
+5141558 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_numero_serie: VARCHAR(50)
+5141558 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_faixa_medicao: VARCHAR(20)
+5141558 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_menor_divisao: VARCHAR(10)
+5141558 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_tolerancia: REAL
+5141559 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column frequencia_id: INTEGER
+5141559 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+5141559 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column frequencia_calibracao: VARCHAR(10)
+5141559 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column condicao_id: INTEGER
+5141560 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+5141560 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column condicao_equipamento: VARCHAR(20)
+5141560 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column condicao_data_inicio: DATE
+5141560 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+5141560 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+5141561 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_tipo: VARCHAR(20)
+5141561 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_empresa_codigo_laudo: VARCHAR(20)
+5141561 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_data: DATE
+5141561 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_aceita_por: VARCHAR(20)
+5141561 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_observacao: VARCHAR(1000)
+5141562 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_id: INTEGER
+5141562 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+5141562 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_sistema_medicao: VARCHAR(20)
+5141562 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_valor_padrao: REAL
+5141563 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_media_medicoes: REAL
+5141563 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_incerteza_medicoes: REAL
+5141563 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+5141563 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_razao_social: VARCHAR(20)
+5141563 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_cnpj: VARCHAR(18)
+5141563 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_nome_fantasia: VARCHAR(20)
+5141563 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+5141564 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_endereco: VARCHAR(1000)
+5141564 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+5141564 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+5141564 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+5141564 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+5141564 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+5141565 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+5141565 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_id: INTEGER
+5141565 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_cpf: VARCHAR(14)
+5141565 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_nome: VARCHAR(200)
+5141565 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_email: VARCHAR(200)
+5141565 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_id: INTEGER
+5141565 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+5144185 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+5144186 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+5144186 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+5144186 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_descricao: VARCHAR(50)
+5144186 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_modelo: VARCHAR(50)
+5144186 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_numero_serie: VARCHAR(50)
+5144186 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_faixa_medicao: VARCHAR(20)
+5144186 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_menor_divisao: VARCHAR(10)
+5144186 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_tolerancia: REAL
+5144187 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+5144187 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_razao_social: VARCHAR(20)
+5144187 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_cnpj: VARCHAR(18)
+5144187 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_nome_fantasia: VARCHAR(20)
+5144187 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_id: INTEGER
+5144187 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_cpf: VARCHAR(14)
+5144188 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_nome: VARCHAR(200)
+5144188 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_email: VARCHAR(200)
+5144188 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_id: INTEGER
+5144188 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+14855098 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+14855099 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+14855099 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+14855099 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_descricao: VARCHAR(50)
+14855099 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_modelo: VARCHAR(50)
+14855100 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_numero_serie: VARCHAR(50)
+14855100 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_faixa_medicao: VARCHAR(20)
+14855100 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_menor_divisao: VARCHAR(10)
+14855100 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_tolerancia: REAL
+14855100 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column frequencia_id: INTEGER
+14855101 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+14855101 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column frequencia_calibracao: VARCHAR(10)
+14855101 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column condicao_id: INTEGER
+14855101 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+14855102 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column condicao_equipamento: VARCHAR(20)
+14855102 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column condicao_data_inicio: DATE
+14855102 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+14855102 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+14855102 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_tipo: VARCHAR(20)
+14855103 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_empresa_codigo_laudo: VARCHAR(20)
+14855103 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_data: DATE
+14855103 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_aceita_por: VARCHAR(20)
+14855103 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_observacao: VARCHAR(1000)
+14855104 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_id: INTEGER
+14855104 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+14855104 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_sistema_medicao: VARCHAR(20)
+14855104 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_valor_padrao: REAL
+14855104 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_media_medicoes: REAL
+14855104 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_incerteza_medicoes: REAL
+14855105 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+14855105 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_razao_social: VARCHAR(20)
+14855105 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_cnpj: VARCHAR(18)
+14855105 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_nome_fantasia: VARCHAR(20)
+14855106 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+14855106 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_endereco: VARCHAR(1000)
+14855106 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+14855106 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+14855107 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+14855107 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+14855107 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+14855107 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+14855107 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_id: INTEGER
+14855108 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_cpf: VARCHAR(14)
+14855108 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_nome: VARCHAR(200)
+14855108 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_email: VARCHAR(200)
+14855108 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_id: INTEGER
+14855109 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+21427796 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+21427878 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+21427878 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+21427879 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_descricao: VARCHAR(50)
+21427879 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_modelo: VARCHAR(50)
+21427880 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_numero_serie: VARCHAR(50)
+21427880 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_faixa_medicao: VARCHAR(20)
+21427881 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_menor_divisao: VARCHAR(10)
+21427881 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_tolerancia: REAL
+21427899 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column frequencia_id: INTEGER
+21427900 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+21427900 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column frequencia_calibracao: VARCHAR(10)
+21427901 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column condicao_id: INTEGER
+21427901 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+21427902 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column condicao_equipamento: VARCHAR(20)
+21427902 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column condicao_data_inicio: DATE
+21427903 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+21427904 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+21427904 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_tipo: VARCHAR(20)
+21427904 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_empresa_codigo_laudo: VARCHAR(20)
+21427905 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_data: DATE
+21427905 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_aceita_por: VARCHAR(20)
+21427905 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_observacao: VARCHAR(1000)
+21427906 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_id: INTEGER
+21427907 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+21427907 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_sistema_medicao: VARCHAR(20)
+21427907 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_valor_padrao: REAL
+21427908 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_media_medicoes: REAL
+21427909 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_incerteza_medicoes: REAL
+21427909 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+21427910 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_razao_social: VARCHAR(20)
+21427910 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_cnpj: VARCHAR(18)
+21427910 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_nome_fantasia: VARCHAR(20)
+21427911 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+21427911 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_endereco: VARCHAR(1000)
+21427912 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+21427912 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+21427913 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+21427913 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+21427914 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+21427914 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+21427915 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_id: INTEGER
+21427915 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_cpf: VARCHAR(14)
+21427916 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_nome: VARCHAR(200)
+21427916 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_email: VARCHAR(200)
+21427917 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_id: INTEGER
+21427917 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+21433647 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+21433656 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+21433656 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+21433657 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_descricao: VARCHAR(50)
+21433657 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_modelo: VARCHAR(50)
+21433657 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_numero_serie: VARCHAR(50)
+21433657 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_faixa_medicao: VARCHAR(20)
+21433657 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_menor_divisao: VARCHAR(10)
+21433658 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_tolerancia: REAL
+0    [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ArchitectUtils  - Log4J configured successfully
+2603 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Beginning to read/merge new pl.ini data
+2778 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Finished reading file.
+2778 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Beginning to read/merge new pl.ini data
+2881 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Finished reading file.
+4586 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.dbtree.DBTreeModel  - Changing a UUID. This should only be done during load.
+4593 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.dbtree.DBTreeModel  - Changing a UUID. This should only be done during load.
+4595 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.dbtree.DBTreeModel  - Changing a UUID. This should only be done during load.
+4597 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.dbtree.DBTreeModel  - Changing a UUID. This should only be done during load.
+4599 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.dbtree.DBTreeModel  - Changing a UUID. This should only be done during load.
+4601 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.dbtree.DBTreeModel  - Changing a UUID. This should only be done during load.
+4603 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.dbtree.DBTreeModel  - Changing a UUID. This should only be done during load.
+4605 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.dbtree.DBTreeModel  - Changing a UUID. This should only be done during load.
+4607 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.dbtree.DBTreeModel  - Changing a UUID. This should only be done during load.
+4608 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.dbtree.DBTreeModel  - Changing a UUID. This should only be done during load.
+4610 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.dbtree.DBTreeModel  - Changing a UUID. This should only be done during load.
+4612 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.dbtree.DBTreeModel  - Changing a UUID. This should only be done during load.
+4614 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.dbtree.DBTreeModel  - Changing a UUID. This should only be done during load.
+4616 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.dbtree.DBTreeModel  - Changing a UUID. This should only be done during load.
+4661 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - TablePane: equipamento (TABLE) is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4662 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - TablePane: frequencia (TABLE) is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4662 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - TablePane: condicao (TABLE) is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4664 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - TablePane: intervencao (TABLE) is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4665 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - TablePane: laudo_intervencao (TABLE) is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4667 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - TablePane: empresa (TABLE) is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4668 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - TablePane: anexo (TABLE) is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4668 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - TablePane: empresa_anexo (TABLE) is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4669 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - TablePane: equipamento_anexo (TABLE) is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4670 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - TablePane: intervencao_anexo (TABLE) is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4671 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - TablePane: pessoa (TABLE) is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4672 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - TablePane: equipamento_pessoa (TABLE) is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4711 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - Relationship: equipamento_frequencia_calibracao_fk is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4717 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - Relationship: equipamento_condicao_fk is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4720 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - Relationship: intervencao_laudo_intervencao_fk is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4722 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - Relationship: intervencao_equipamento_fk is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4725 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - Relationship: empresa_intervencao_fk is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4730 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - Relationship: empresa_equipamento_fk is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4731 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - Relationship: empresa_empresa_anexo_fk is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4733 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - Relationship: anexo_empresa_anexo_fk is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4735 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - Relationship: anexo_equipamento_anexo_fk is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4737 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - Relationship: equipamento_equipamento_anexo_fk is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4739 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - Relationship: anexo_intervencao_anexo_fk is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4740 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - Relationship: intervencao_intervencao_anexo_fk is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4742 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - Relationship: pessoa_equipamento_pessoa_fk is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+4743 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPenComponent  - Relationship: equipamento_equipamento_pessoa_fk is adding ca.sqlpower.architect.swingui.PlayPen[Play Pen,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=java.awt.Dimension[width=1,height=1],preferredSize=]
+5877 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+5879 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+5879 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+5879 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_descricao: VARCHAR(50)
+5880 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_modelo: VARCHAR(50)
+5880 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_numero_serie: VARCHAR(50)
+5881 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_faixa_medicao: VARCHAR(20)
+5881 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_menor_divisao: VARCHAR(10)
+5881 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_tolerancia: REAL
+5882 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column frequencia_id: INTEGER
+5882 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+5882 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column frequencia_calibracao: VARCHAR(10)
+5882 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column condicao_id: INTEGER
+5883 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+5883 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column condicao_equipamento: VARCHAR(20)
+5883 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column condicao_data_inicio: DATE
+5883 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+5884 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+5884 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_tipo: VARCHAR(20)
+5884 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_empresa_codigo_laudo: VARCHAR(20)
+5884 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_data: DATE
+5884 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_aceita_por: VARCHAR(20)
+5885 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_observacao: VARCHAR(1000)
+5885 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_id: INTEGER
+5885 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+5885 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_sistema_medicao: VARCHAR(20)
+5885 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_valor_padrao: REAL
+5885 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_media_medicoes: REAL
+5886 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_incerteza_medicoes: REAL
+5886 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+5886 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_razao_social: VARCHAR(20)
+5886 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_cnpj: VARCHAR(18)
+5887 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_nome_fantasia: VARCHAR(20)
+5887 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+5887 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_endereco: VARCHAR(1000)
+5963 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column empresa_id: INTEGER
+5963 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+5963 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+5963 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+5964 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column anexo_id: INTEGER
+5964 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+5964 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_id: INTEGER
+5964 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_cpf: VARCHAR(14)
+5965 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_nome: VARCHAR(200)
+5965 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_email: VARCHAR(200)
+5965 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column pessoa_id: INTEGER
+5965 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+17621 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column condicao_id: INTEGER
+17621 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column equipamento_id: INTEGER
+17622 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column condicao_equipamento: VARCHAR(20)
+17622 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column condicao_data_inicio: DATE
+17623 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_id: INTEGER
+17623 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column intervencao_id: INTEGER
+17624 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_sistema_medicao: VARCHAR(20)
+17624 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_valor_padrao: REAL
+17625 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_media_medicoes: REAL
+17626 [AWT-EventQueue-0] DEBUG ca.sqlpower.architect.swingui.TablePane  - Checking column laudo_intervencao_incerteza_medicoes: REAL
