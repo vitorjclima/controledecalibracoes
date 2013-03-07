@@ -69,7 +69,7 @@ public class IntervencaoAnexo implements Serializable {
 
     @Override
     public String toString() {
-        return "br.com.vitorjclima.controledecalibracoes.db.IntervencaoAnexo[ intervencaoAnexoPK=" + intervencaoAnexoPK + " ]";
+        return "br.com.vitorjclima.controledeintervencoes.db.IntervencaoAnexo[ intervencaoAnexoPK=" + intervencaoAnexoPK + " ]";
     }
     
 }

@@ -25,7 +25,6 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Equipamento.findAll", query = "SELECT e FROM Equipamento e"),
     @NamedQuery(name = "Equipamento.findByEquipamentoId", query = "SELECT e FROM Equipamento e WHERE e.equipamentoId = :equipamentoId"),
     @NamedQuery(name = "Equipamento.findByEmpresaId", query = "SELECT e FROM Equipamento e WHERE e.empresaId = :empresaId"),
-    @NamedQuery(name = "Equipamento.findByIntervencaoId", query = "SELECT e FROM Equipamento e WHERE e.intervencaoId = :intervencaoId"),
     @NamedQuery(name = "Equipamento.findByEquipamentoDescricao", query = "SELECT e FROM Equipamento e WHERE e.equipamentoDescricao = :equipamentoDescricao"),
     @NamedQuery(name = "Equipamento.findByEquipamentoModelo", query = "SELECT e FROM Equipamento e WHERE e.equipamentoModelo = :equipamentoModelo"),
     @NamedQuery(name = "Equipamento.findByEquipamentoNumeroSerie", query = "SELECT e FROM Equipamento e WHERE e.equipamentoNumeroSerie = :equipamentoNumeroSerie"),
@@ -41,9 +40,6 @@ public class Equipamento implements Serializable {
     @Basic(optional = false)
     @Column(name = "empresa_id")
     private int empresaId;
-    @Basic(optional = false)
-    @Column(name = "intervencao_id")
-    private int intervencaoId;
     @Column(name = "equipamento_descricao")
     private String equipamentoDescricao;
     @Column(name = "equipamento_modelo")
@@ -68,10 +64,9 @@ public class Equipamento implements Serializable {
         this.equipamentoId = equipamentoId;
     }
 
-    public Equipamento(Integer equipamentoId, int empresaId, int intervencaoId, String equipamentoNumeroSerie, String equipamentoFaixaMedicao, String equipamentoMenorDivisao, double equipamentoTolerancia) {
+    public Equipamento(Integer equipamentoId, int empresaId, String equipamentoNumeroSerie, String equipamentoFaixaMedicao, String equipamentoMenorDivisao, double equipamentoTolerancia) {
         this.equipamentoId = equipamentoId;
         this.empresaId = empresaId;
-        this.intervencaoId = intervencaoId;
         this.equipamentoNumeroSerie = equipamentoNumeroSerie;
         this.equipamentoFaixaMedicao = equipamentoFaixaMedicao;
         this.equipamentoMenorDivisao = equipamentoMenorDivisao;
@@ -92,14 +87,6 @@ public class Equipamento implements Serializable {
 
     public void setEmpresaId(int empresaId) {
         this.empresaId = empresaId;
-    }
-
-    public int getIntervencaoId() {
-        return intervencaoId;
-    }
-
-    public void setIntervencaoId(int intervencaoId) {
-        this.intervencaoId = intervencaoId;
     }
 
     public String getEquipamentoDescricao() {
@@ -172,7 +159,7 @@ public class Equipamento implements Serializable {
 
     @Override
     public String toString() {
-        return "br.com.vitorjclima.controledecalibracoes.db.Equipamento[ equipamentoId=" + equipamentoId + " ]";
+        return "br.com.vitorjclima.controledeintervencoes.db.Equipamento[ equipamentoId=" + equipamentoId + " ]";
     }
     
 }

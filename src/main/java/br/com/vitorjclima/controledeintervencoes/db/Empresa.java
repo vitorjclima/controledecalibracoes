@@ -114,7 +114,7 @@ public class Empresa implements Serializable {
 
     @Override
     public String toString() {
-        return "br.com.vitorjclima.controledecalibracoes.db.Empresa[ empresaId=" + empresaId + " ]";
+        return "br.com.vitorjclima.controledeintervencoes.db.Empresa[ empresaId=" + empresaId + " ]";
     }
     
 }

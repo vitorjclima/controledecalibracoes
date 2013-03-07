@@ -29,8 +29,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 @NamedQueries({
     @NamedQuery(name = "Intervencao.findAll", query = "SELECT i FROM Intervencao i"),
     @NamedQuery(name = "Intervencao.findByIntervencaoId", query = "SELECT i FROM Intervencao i WHERE i.intervencaoId = :intervencaoId"),
+    @NamedQuery(name = "Intervencao.findByEquipamentoId", query = "SELECT i FROM Intervencao i WHERE i.equipamentoId = :equipamentoId"),
+    @NamedQuery(name = "Intervencao.findByIntervencaoTipoId", query = "SELECT i FROM Intervencao i WHERE i.intervencaoTipoId = :intervencaoTipoId"),
     @NamedQuery(name = "Intervencao.findByEmpresaId", query = "SELECT i FROM Intervencao i WHERE i.empresaId = :empresaId"),
-    @NamedQuery(name = "Intervencao.findByIntervencaoTipo", query = "SELECT i FROM Intervencao i WHERE i.intervencaoTipo = :intervencaoTipo"),
     @NamedQuery(name = "Intervencao.findByIntervencaoEmpresaCodigoLaudo", query = "SELECT i FROM Intervencao i WHERE i.intervencaoEmpresaCodigoLaudo = :intervencaoEmpresaCodigoLaudo"),
     @NamedQuery(name = "Intervencao.findByIntervencaoData", query = "SELECT i FROM Intervencao i WHERE i.intervencaoData = :intervencaoData"),
     @NamedQuery(name = "Intervencao.findByIntervencaoAceitaPor", query = "SELECT i FROM Intervencao i WHERE i.intervencaoAceitaPor = :intervencaoAceitaPor"),
@@ -42,12 +43,14 @@ public class Intervencao implements Serializable {
     @Basic(optional = false)
     @Column(name = "intervencao_id")
     private Integer intervencaoId;
+    @Column(name = "equipamento_id")
+    private Integer equipamentoId;
+    @Basic(optional = false)
+    @Column(name = "intervencao_tipo_id")
+    private String intervencaoTipoId;
     @Basic(optional = false)
     @Column(name = "empresa_id")
     private int empresaId;
-    @Basic(optional = false)
-    @Column(name = "intervencao_tipo")
-    private String intervencaoTipo;
     @Basic(optional = false)
     @Column(name = "intervencao_empresa_codigo_laudo")
     private String intervencaoEmpresaCodigoLaudo;
@@ -69,10 +72,10 @@ public class Intervencao implements Serializable {
         this.intervencaoId = intervencaoId;
     }
 
-    public Intervencao(Integer intervencaoId, int empresaId, String intervencaoTipo, String intervencaoEmpresaCodigoLaudo, Date intervencaoData, String intervencaoAceitaPor, String intervencaoObservacao) {
+    public Intervencao(Integer intervencaoId, String intervencaoTipoId, int empresaId, String intervencaoEmpresaCodigoLaudo, Date intervencaoData, String intervencaoAceitaPor, String intervencaoObservacao) {
         this.intervencaoId = intervencaoId;
+        this.intervencaoTipoId = intervencaoTipoId;
         this.empresaId = empresaId;
-        this.intervencaoTipo = intervencaoTipo;
         this.intervencaoEmpresaCodigoLaudo = intervencaoEmpresaCodigoLaudo;
         this.intervencaoData = intervencaoData;
         this.intervencaoAceitaPor = intervencaoAceitaPor;
@@ -87,20 +90,28 @@ public class Intervencao implements Serializable {
         this.intervencaoId = intervencaoId;
     }
 
+    public Integer getEquipamentoId() {
+        return equipamentoId;
+    }
+
+    public void setEquipamentoId(Integer equipamentoId) {
+        this.equipamentoId = equipamentoId;
+    }
+
+    public String getIntervencaoTipoId() {
+        return intervencaoTipoId;
+    }
+
+    public void setIntervencaoTipoId(String intervencaoTipoId) {
+        this.intervencaoTipoId = intervencaoTipoId;
+    }
+
     public int getEmpresaId() {
         return empresaId;
     }
 
     public void setEmpresaId(int empresaId) {
         this.empresaId = empresaId;
-    }
-
-    public String getIntervencaoTipo() {
-        return intervencaoTipo;
-    }
-
-    public void setIntervencaoTipo(String intervencaoTipo) {
-        this.intervencaoTipo = intervencaoTipo;
     }
 
     public String getIntervencaoEmpresaCodigoLaudo() {
@@ -157,7 +168,7 @@ public class Intervencao implements Serializable {
 
     @Override
     public String toString() {
-        return "br.com.vitorjclima.controledecalibracoes.db.Intervencao[ intervencaoId=" + intervencaoId + " ]";
+        return "br.com.vitorjclima.controledeintervencoes.db.Intervencao[ intervencaoId=" + intervencaoId + " ]";
     }
     
 }

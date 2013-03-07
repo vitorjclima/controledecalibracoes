@@ -26,8 +26,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 @NamedQueries({
     @NamedQuery(name = "LaudoIntervencao.findAll", query = "SELECT l FROM LaudoIntervencao l"),
     @NamedQuery(name = "LaudoIntervencao.findByLaudoIntervencaoId", query = "SELECT l FROM LaudoIntervencao l WHERE l.laudoIntervencaoId = :laudoIntervencaoId"),
+    @NamedQuery(name = "LaudoIntervencao.findBySistemaMedicaoId", query = "SELECT l FROM LaudoIntervencao l WHERE l.sistemaMedicaoId = :sistemaMedicaoId"),
     @NamedQuery(name = "LaudoIntervencao.findByIntervencaoId", query = "SELECT l FROM LaudoIntervencao l WHERE l.intervencaoId = :intervencaoId"),
-    @NamedQuery(name = "LaudoIntervencao.findByLaudoIntervencaoSistemaMedicao", query = "SELECT l FROM LaudoIntervencao l WHERE l.laudoIntervencaoSistemaMedicao = :laudoIntervencaoSistemaMedicao"),
     @NamedQuery(name = "LaudoIntervencao.findByLaudoIntervencaoValorPadrao", query = "SELECT l FROM LaudoIntervencao l WHERE l.laudoIntervencaoValorPadrao = :laudoIntervencaoValorPadrao"),
     @NamedQuery(name = "LaudoIntervencao.findByLaudoIntervencaoMediaMedicoes", query = "SELECT l FROM LaudoIntervencao l WHERE l.laudoIntervencaoMediaMedicoes = :laudoIntervencaoMediaMedicoes"),
     @NamedQuery(name = "LaudoIntervencao.findByLaudoIntervencaoIncertezaMedicoes", query = "SELECT l FROM LaudoIntervencao l WHERE l.laudoIntervencaoIncertezaMedicoes = :laudoIntervencaoIncertezaMedicoes")})
@@ -39,11 +39,11 @@ public class LaudoIntervencao implements Serializable {
     @Column(name = "laudo_intervencao_id")
     private Integer laudoIntervencaoId;
     @Basic(optional = false)
+    @Column(name = "sistema_medicao_id")
+    private String sistemaMedicaoId;
+    @Basic(optional = false)
     @Column(name = "intervencao_id")
     private int intervencaoId;
-    @Basic(optional = false)
-    @Column(name = "laudo_intervencao_sistema_medicao")
-    private String laudoIntervencaoSistemaMedicao;
     @Basic(optional = false)
     @Column(name = "laudo_intervencao_valor_padrao")
     private double laudoIntervencaoValorPadrao;
@@ -61,10 +61,10 @@ public class LaudoIntervencao implements Serializable {
         this.laudoIntervencaoId = laudoIntervencaoId;
     }
 
-    public LaudoIntervencao(Integer laudoIntervencaoId, int intervencaoId, String laudoIntervencaoSistemaMedicao, double laudoIntervencaoValorPadrao, double laudoIntervencaoMediaMedicoes, double laudoIntervencaoIncertezaMedicoes) {
+    public LaudoIntervencao(Integer laudoIntervencaoId, String sistemaMedicaoId, int intervencaoId, double laudoIntervencaoValorPadrao, double laudoIntervencaoMediaMedicoes, double laudoIntervencaoIncertezaMedicoes) {
         this.laudoIntervencaoId = laudoIntervencaoId;
+        this.sistemaMedicaoId = sistemaMedicaoId;
         this.intervencaoId = intervencaoId;
-        this.laudoIntervencaoSistemaMedicao = laudoIntervencaoSistemaMedicao;
         this.laudoIntervencaoValorPadrao = laudoIntervencaoValorPadrao;
         this.laudoIntervencaoMediaMedicoes = laudoIntervencaoMediaMedicoes;
         this.laudoIntervencaoIncertezaMedicoes = laudoIntervencaoIncertezaMedicoes;
@@ -78,20 +78,20 @@ public class LaudoIntervencao implements Serializable {
         this.laudoIntervencaoId = laudoIntervencaoId;
     }
 
+    public String getSistemaMedicaoId() {
+        return sistemaMedicaoId;
+    }
+
+    public void setSistemaMedicaoId(String sistemaMedicaoId) {
+        this.sistemaMedicaoId = sistemaMedicaoId;
+    }
+
     public int getIntervencaoId() {
         return intervencaoId;
     }
 
     public void setIntervencaoId(int intervencaoId) {
         this.intervencaoId = intervencaoId;
-    }
-
-    public String getLaudoIntervencaoSistemaMedicao() {
-        return laudoIntervencaoSistemaMedicao;
-    }
-
-    public void setLaudoIntervencaoSistemaMedicao(String laudoIntervencaoSistemaMedicao) {
-        this.laudoIntervencaoSistemaMedicao = laudoIntervencaoSistemaMedicao;
     }
 
     public double getLaudoIntervencaoValorPadrao() {
@@ -140,7 +140,7 @@ public class LaudoIntervencao implements Serializable {
 
     @Override
     public String toString() {
-        return "br.com.vitorjclima.controledecalibracoes.db.LaudoIntervencao[ laudoIntervencaoId=" + laudoIntervencaoId + " ]";
+        return "br.com.vitorjclima.controledeintervencoes.db.LaudoIntervencao[ laudoIntervencaoId=" + laudoIntervencaoId + " ]";
     }
     
 }

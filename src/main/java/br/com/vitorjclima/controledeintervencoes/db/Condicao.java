@@ -116,7 +116,7 @@ public class Condicao implements Serializable {
 
     @Override
     public String toString() {
-        return "br.com.vitorjclima.controledecalibracoes.db.Condicao[ condicaoId=" + condicaoId + " ]";
+        return "br.com.vitorjclima.controledeintervencoes.db.Condicao[ condicaoId=" + condicaoId + " ]";
     }
     
 }

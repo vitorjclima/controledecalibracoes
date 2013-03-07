@@ -99,7 +99,7 @@ public class Frequencia implements Serializable {
 
     @Override
     public String toString() {
-        return "br.com.vitorjclima.controledecalibracoes.db.Frequencia[ frequenciaId=" + frequenciaId + " ]";
+        return "br.com.vitorjclima.controledeintervencoes.db.Frequencia[ frequenciaId=" + frequenciaId + " ]";
     }
     
 }

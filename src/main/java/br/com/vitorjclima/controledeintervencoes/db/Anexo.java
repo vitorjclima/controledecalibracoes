@@ -88,7 +88,7 @@ public class Anexo implements Serializable {
 
     @Override
     public String toString() {
-        return "br.com.vitorjclima.controledecalibracoes.db.Anexo[ anexoId=" + anexoId + " ]";
+        return "br.com.vitorjclima.controledeintervencoes.db.Anexo[ anexoId=" + anexoId + " ]";
     }
     
 }

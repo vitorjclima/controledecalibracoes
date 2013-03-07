@@ -69,7 +69,7 @@ public class EquipamentoPessoa implements Serializable {
 
     @Override
     public String toString() {
-        return "br.com.vitorjclima.controledecalibracoes.db.EquipamentoPessoa[ equipamentoPessoaPK=" + equipamentoPessoaPK + " ]";
+        return "br.com.vitorjclima.controledeintervencoes.db.EquipamentoPessoa[ equipamentoPessoaPK=" + equipamentoPessoaPK + " ]";
     }
     
 }
