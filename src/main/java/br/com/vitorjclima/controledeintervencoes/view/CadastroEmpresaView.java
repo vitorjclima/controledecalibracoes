@@ -31,12 +31,12 @@ public class CadastroEmpresaView extends javax.swing.JFrame {
         labelCNPJ = new javax.swing.JLabel();
         razaoSocial = new javax.swing.JTextField();
         nomeFantasia = new javax.swing.JTextField();
-        cnpj = new javax.swing.JTextField();
         botaoSalvar = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        botaoEditar = new javax.swing.JButton();
+        botaoExcluir = new javax.swing.JButton();
         pesquisar = new javax.swing.JTextField();
         botaoPesquisar = new javax.swing.JButton();
+        cnpj = new javax.swing.JFormattedTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -65,14 +65,26 @@ public class CadastroEmpresaView extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("Editar");
+        botaoEditar.setText("Editar");
 
-        jButton2.setText("Excluir");
+        botaoExcluir.setText("Excluir");
 
         botaoPesquisar.setText("Pesquisar");
         botaoPesquisar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoPesquisarActionPerformed(evt);
+            }
+        });
+
+        try {
+            cnpj.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        cnpj.setToolTipText("");
+        cnpj.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cnpjActionPerformed(evt);
             }
         });
 
@@ -95,11 +107,9 @@ public class CadastroEmpresaView extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(labelCNPJ)
                         .addGap(56, 56, 56)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(cnpj, javax.swing.GroupLayout.DEFAULT_SIZE, 288, Short.MAX_VALUE)
-                        .addComponent(razaoSocial)
-                        .addComponent(nomeFantasia))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(razaoSocial, javax.swing.GroupLayout.DEFAULT_SIZE, 288, Short.MAX_VALUE)
+                    .addComponent(nomeFantasia)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(8, 8, 8)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -110,9 +120,10 @@ public class CadastroEmpresaView extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(botaoSalvar)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton1)
+                                .addComponent(botaoEditar)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton2)))))
+                                .addComponent(botaoExcluir))))
+                    .addComponent(cnpj, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -133,8 +144,8 @@ public class CadastroEmpresaView extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botaoSalvar)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(botaoEditar)
+                    .addComponent(botaoExcluir))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(pesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -160,6 +171,10 @@ public class CadastroEmpresaView extends javax.swing.JFrame {
     private void botaoPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoPesquisarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_botaoPesquisarActionPerformed
+
+    private void cnpjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cnpjActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cnpjActionPerformed
 
     /**
      * @param args the command line arguments
@@ -196,11 +211,11 @@ public class CadastroEmpresaView extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botaoEditar;
+    private javax.swing.JButton botaoExcluir;
     private javax.swing.JButton botaoPesquisar;
     private javax.swing.JButton botaoSalvar;
-    private javax.swing.JTextField cnpj;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JFormattedTextField cnpj;
     private javax.swing.JLabel labelCNPJ;
     private javax.swing.JLabel labelNomeFantasia;
     private javax.swing.JLabel labelRazaoSocial;
