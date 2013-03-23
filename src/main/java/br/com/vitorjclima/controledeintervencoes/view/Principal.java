@@ -9,6 +9,12 @@ package br.com.vitorjclima.controledeintervencoes.view;
  * @author vitor
  */
 public class Principal extends javax.swing.JFrame {
+    
+    private CadastroEmpresaView cadastroempresa;
+    private CadastroEquipamentoView cadastroequipamento;
+    private CondicaoView condicao;
+    private IntervencaoView intervencao;
+    private PessoaView pessoa = new PessoaView(this);
 
     /**
      * Creates new form Principal
@@ -29,14 +35,14 @@ public class Principal extends javax.swing.JFrame {
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuBar1 = new javax.swing.JMenuBar();
         menuCadastro = new javax.swing.JMenu();
-        jMenu4 = new javax.swing.JMenu();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenuItem6 = new javax.swing.JMenuItem();
-        jMenuItem7 = new javax.swing.JMenuItem();
-        jMenuItem8 = new javax.swing.JMenuItem();
+        MenuCadastroNovo = new javax.swing.JMenu();
+        MenuCadastroNovoPessoa = new javax.swing.JMenuItem();
+        MenuCadastroNovoEmpresa = new javax.swing.JMenuItem();
+        MenuCadastroNovoCondicao = new javax.swing.JMenuItem();
+        MenuCadastroNovoEquipamento = new javax.swing.JMenuItem();
+        MenuCadastroNovoFrequencia = new javax.swing.JMenuItem();
+        MenuCadastroNovoPessoaSistemaMedicao = new javax.swing.JMenuItem();
+        MenuCadastroNovoTipoIntervencao = new javax.swing.JMenuItem();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
         jMenu5 = new javax.swing.JMenu();
         jMenuItem10 = new javax.swing.JMenuItem();
@@ -63,6 +69,9 @@ public class Principal extends javax.swing.JFrame {
         jMenuItem24 = new javax.swing.JMenuItem();
         jMenuItem28 = new javax.swing.JMenuItem();
         jMenuItem27 = new javax.swing.JMenuItem();
+        jMenu3 = new javax.swing.JMenu();
+        jMenuItem29 = new javax.swing.JMenuItem();
+        jMenuItem30 = new javax.swing.JMenuItem();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -70,50 +79,55 @@ public class Principal extends javax.swing.JFrame {
 
         menuCadastro.setText("Cadastros");
 
-        jMenu4.setText("Novo");
+        MenuCadastroNovo.setText("Novo");
 
-        jMenuItem2.setText("Pessoa");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+        MenuCadastroNovoPessoa.setText("Pessoa");
+        MenuCadastroNovoPessoa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
+                MenuCadastroNovoPessoaActionPerformed(evt);
             }
         });
-        jMenu4.add(jMenuItem2);
+        MenuCadastroNovo.add(MenuCadastroNovoPessoa);
 
-        jMenuItem3.setText("Empresa");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+        MenuCadastroNovoEmpresa.setText("Empresa");
+        MenuCadastroNovoEmpresa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
+                MenuCadastroNovoEmpresaActionPerformed(evt);
             }
         });
-        jMenu4.add(jMenuItem3);
+        MenuCadastroNovo.add(MenuCadastroNovoEmpresa);
 
-        jMenuItem5.setText("Condição");
-        jMenu4.add(jMenuItem5);
-
-        jMenuItem4.setText("Equipamento");
-        jMenu4.add(jMenuItem4);
-
-        jMenuItem6.setText("Frequência");
-        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+        MenuCadastroNovoCondicao.setText("Condição");
+        MenuCadastroNovoCondicao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem6ActionPerformed(evt);
+                MenuCadastroNovoCondicaoActionPerformed(evt);
             }
         });
-        jMenu4.add(jMenuItem6);
+        MenuCadastroNovo.add(MenuCadastroNovoCondicao);
 
-        jMenuItem7.setText("Sistema de Medição");
-        jMenu4.add(jMenuItem7);
+        MenuCadastroNovoEquipamento.setText("Equipamento");
+        MenuCadastroNovo.add(MenuCadastroNovoEquipamento);
 
-        jMenuItem8.setText("Tipo de Intervenção");
-        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
+        MenuCadastroNovoFrequencia.setText("Frequência");
+        MenuCadastroNovoFrequencia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem8ActionPerformed(evt);
+                MenuCadastroNovoFrequenciaActionPerformed(evt);
             }
         });
-        jMenu4.add(jMenuItem8);
+        MenuCadastroNovo.add(MenuCadastroNovoFrequencia);
 
-        menuCadastro.add(jMenu4);
+        MenuCadastroNovoPessoaSistemaMedicao.setText("Sistema de Medição");
+        MenuCadastroNovo.add(MenuCadastroNovoPessoaSistemaMedicao);
+
+        MenuCadastroNovoTipoIntervencao.setText("Tipo de Intervenção");
+        MenuCadastroNovoTipoIntervencao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MenuCadastroNovoTipoIntervencaoActionPerformed(evt);
+            }
+        });
+        MenuCadastroNovo.add(MenuCadastroNovoTipoIntervencao);
+
+        menuCadastro.add(MenuCadastroNovo);
         menuCadastro.add(jSeparator1);
 
         jMenu5.setText("Editar");
@@ -245,6 +259,21 @@ public class Principal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu2);
 
+        jMenu3.setText("Backup");
+
+        jMenuItem29.setText("Criar");
+        jMenu3.add(jMenuItem29);
+
+        jMenuItem30.setText("Restaurar");
+        jMenuItem30.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem30ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem30);
+
+        jMenuBar1.add(jMenu3);
+
         setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -261,17 +290,18 @@ public class Principal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+    private void MenuCadastroNovoPessoaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuCadastroNovoPessoaActionPerformed
+        this.setEnabled(false);
+        pessoa.setVisible(true);
+    }//GEN-LAST:event_MenuCadastroNovoPessoaActionPerformed
 
-    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+    private void MenuCadastroNovoFrequenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuCadastroNovoFrequenciaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem6ActionPerformed
+    }//GEN-LAST:event_MenuCadastroNovoFrequenciaActionPerformed
 
-    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
+    private void MenuCadastroNovoTipoIntervencaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuCadastroNovoTipoIntervencaoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem8ActionPerformed
+    }//GEN-LAST:event_MenuCadastroNovoTipoIntervencaoActionPerformed
 
     private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
         // TODO add your handling code here:
@@ -313,9 +343,17 @@ public class Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem28ActionPerformed
 
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+    private void MenuCadastroNovoEmpresaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuCadastroNovoEmpresaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
+    }//GEN-LAST:event_MenuCadastroNovoEmpresaActionPerformed
+
+    private void jMenuItem30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem30ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem30ActionPerformed
+
+    private void MenuCadastroNovoCondicaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuCadastroNovoCondicaoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_MenuCadastroNovoCondicaoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -352,9 +390,17 @@ public class Principal extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu MenuCadastroNovo;
+    private javax.swing.JMenuItem MenuCadastroNovoCondicao;
+    private javax.swing.JMenuItem MenuCadastroNovoEmpresa;
+    private javax.swing.JMenuItem MenuCadastroNovoEquipamento;
+    private javax.swing.JMenuItem MenuCadastroNovoFrequencia;
+    private javax.swing.JMenuItem MenuCadastroNovoPessoa;
+    private javax.swing.JMenuItem MenuCadastroNovoPessoaSistemaMedicao;
+    private javax.swing.JMenuItem MenuCadastroNovoTipoIntervencao;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenu jMenu6;
     private javax.swing.JMenuBar jMenuBar1;
@@ -369,7 +415,6 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem17;
     private javax.swing.JMenuItem jMenuItem18;
     private javax.swing.JMenuItem jMenuItem19;
-    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem20;
     private javax.swing.JMenuItem jMenuItem21;
     private javax.swing.JMenuItem jMenuItem22;
@@ -379,12 +424,8 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem26;
     private javax.swing.JMenuItem jMenuItem27;
     private javax.swing.JMenuItem jMenuItem28;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JMenuItem jMenuItem7;
-    private javax.swing.JMenuItem jMenuItem8;
+    private javax.swing.JMenuItem jMenuItem29;
+    private javax.swing.JMenuItem jMenuItem30;
     private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
