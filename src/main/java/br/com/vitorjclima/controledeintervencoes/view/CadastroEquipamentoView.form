@@ -40,29 +40,6 @@
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="labelFaixaMedicao" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="labelMenorDivisao" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="labelEmpresa" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="labelModelo" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="labelNumeroSerie" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="labelDescricao" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="modelo" linkSize="1" alignment="0" min="-2" pref="308" max="-2" attributes="0"/>
-                          <Component id="descricao" linkSize="1" alignment="0" min="-2" pref="308" max="-2" attributes="0"/>
-                          <Component id="numeroSerie" linkSize="1" alignment="0" min="-2" pref="308" max="-2" attributes="0"/>
-                          <Component id="faixaMedicao" linkSize="1" alignment="0" min="-2" pref="308" max="-2" attributes="0"/>
-                          <Component id="menorDivisao" linkSize="1" alignment="0" min="-2" pref="308" max="-2" attributes="0"/>
-                          <Component id="empresaComboBox" linkSize="1" alignment="0" min="-2" pref="308" max="-2" attributes="0"/>
-                          <Component id="botaoCondicao" linkSize="1" alignment="0" min="-2" pref="308" max="-2" attributes="0"/>
-                          <Component id="botaoTolerancia" linkSize="1" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
-                          <Component id="jScrollPane2" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="120" pref="120" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
@@ -79,8 +56,31 @@
                           </Group>
                       </Group>
                   </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="labelFaixaMedicao" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelMenorDivisao" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelEmpresa" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelModelo" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelNumeroSerie" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelDescricao" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="botaoTolerancia" max="32767" attributes="0"/>
+                          <Component id="modelo" linkSize="1" alignment="0" pref="308" max="32767" attributes="0"/>
+                          <Component id="descricao" linkSize="1" alignment="0" pref="308" max="32767" attributes="0"/>
+                          <Component id="numeroSerie" linkSize="1" alignment="0" pref="308" max="32767" attributes="0"/>
+                          <Component id="faixaMedicao" linkSize="1" alignment="0" pref="308" max="32767" attributes="0"/>
+                          <Component id="menorDivisao" linkSize="1" alignment="0" pref="308" max="32767" attributes="0"/>
+                          <Component id="empresaComboBox" linkSize="1" alignment="0" pref="308" max="32767" attributes="0"/>
+                          <Component id="botaoCondicao" alignment="0" max="32767" attributes="0"/>
+                          <Component id="condicao" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
-              <EmptySpace pref="19" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -124,10 +124,10 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="botaoCondicao" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jScrollPane2" min="-2" pref="64" max="-2" attributes="0"/>
-              <EmptySpace pref="72" max="32767" attributes="0"/>
+              <Component id="condicao" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="111" max="32767" attributes="0"/>
               <Component id="botaoTolerancia" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
               <Component id="jSeparator1" min="-2" pref="9" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -226,45 +226,28 @@
         </Property>
       </Properties>
     </Component>
-    <Component class="javax.swing.JToggleButton" name="botaoCondicao">
+    <Component class="javax.swing.JSeparator" name="jSeparator1">
+    </Component>
+    <Component class="javax.swing.JButton" name="botaoCondicao">
       <Properties>
         <Property name="text" type="java.lang.String" value="Condi&#xe7;&#xe3;o"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botaoCondicaoActionPerformed"/>
       </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="CadastroEquipamentoView_botaoCondicao"/>
+      </AuxValues>
     </Component>
-    <Component class="javax.swing.JToggleButton" name="botaoTolerancia">
+    <Component class="javax.swing.JButton" name="botaoTolerancia">
       <Properties>
         <Property name="text" type="java.lang.String" value="Toler&#xe2;ncia"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="condicao">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botaoToleranciaActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="condicaoActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JSeparator" name="jSeparator1">
-    </Component>
-    <Container class="javax.swing.JScrollPane" name="jScrollPane2">
-      <AuxValues>
-        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-      </AuxValues>
-
-      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-      <SubComponents>
-        <Component class="javax.swing.JList" name="jList1">
-          <Properties>
-            <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
-              <StringArray count="5">
-                <StringItem index="0" value="Item 1"/>
-                <StringItem index="1" value="Item 2"/>
-                <StringItem index="2" value="Item 3"/>
-                <StringItem index="3" value="Item 4"/>
-                <StringItem index="4" value="Item 5"/>
-              </StringArray>
-            </Property>
-          </Properties>
-        </Component>
-      </SubComponents>
-    </Container>
   </SubComponents>
 </Form>

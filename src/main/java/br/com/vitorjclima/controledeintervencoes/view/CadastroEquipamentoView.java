@@ -1,13 +1,5 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.vitorjclima.controledeintervencoes.view;
 
-/**
- *
- * @author vitor
- */
 public class CadastroEquipamentoView extends javax.swing.JFrame {
 
     /**
@@ -16,7 +8,10 @@ public class CadastroEquipamentoView extends javax.swing.JFrame {
     public CadastroEquipamentoView() {
         initComponents();
     }
-
+   
+    public void setCondicao(String condicao){
+        this.condicao.setText(condicao);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -45,11 +40,10 @@ public class CadastroEquipamentoView extends javax.swing.JFrame {
         botaoExcluir = new javax.swing.JButton();
         labelEmpresa = new javax.swing.JLabel();
         empresaComboBox = new javax.swing.JComboBox();
-        botaoCondicao = new javax.swing.JToggleButton();
-        botaoTolerancia = new javax.swing.JToggleButton();
         jSeparator1 = new javax.swing.JSeparator();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList();
+        botaoCondicao = new javax.swing.JButton();
+        botaoTolerancia = new javax.swing.JButton();
+        condicao = new javax.swing.JTextField();
 
         jScrollPane1.setViewportView(jTree1);
 
@@ -95,18 +89,12 @@ public class CadastroEquipamentoView extends javax.swing.JFrame {
         });
 
         botaoTolerancia.setText("Tolerância");
-        botaoTolerancia.addActionListener(new java.awt.event.ActionListener() {
+
+        condicao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botaoToleranciaActionPerformed(evt);
+                condicaoActionPerformed(evt);
             }
         });
-
-        jList1.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane2.setViewportView(jList1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -115,26 +103,6 @@ public class CadastroEquipamentoView extends javax.swing.JFrame {
             .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(labelFaixaMedicao)
-                            .addComponent(labelMenorDivisao)
-                            .addComponent(labelEmpresa)
-                            .addComponent(labelModelo)
-                            .addComponent(labelNumeroSerie)
-                            .addComponent(labelDescricao))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(modelo, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(descricao, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(numeroSerie, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(faixaMedicao, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(menorDivisao, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(empresaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(botaoCondicao, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(botaoTolerancia, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(120, 120, 120)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -147,11 +115,31 @@ public class CadastroEquipamentoView extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(botaoEditar)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(botaoExcluir)))))
-                .addContainerGap(19, Short.MAX_VALUE))
+                                .addComponent(botaoExcluir))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelFaixaMedicao)
+                            .addComponent(labelMenorDivisao)
+                            .addComponent(labelEmpresa)
+                            .addComponent(labelModelo)
+                            .addComponent(labelNumeroSerie)
+                            .addComponent(labelDescricao))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(botaoTolerancia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(modelo, javax.swing.GroupLayout.DEFAULT_SIZE, 308, Short.MAX_VALUE)
+                            .addComponent(descricao, javax.swing.GroupLayout.DEFAULT_SIZE, 308, Short.MAX_VALUE)
+                            .addComponent(numeroSerie, javax.swing.GroupLayout.DEFAULT_SIZE, 308, Short.MAX_VALUE)
+                            .addComponent(faixaMedicao, javax.swing.GroupLayout.DEFAULT_SIZE, 308, Short.MAX_VALUE)
+                            .addComponent(menorDivisao, javax.swing.GroupLayout.DEFAULT_SIZE, 308, Short.MAX_VALUE)
+                            .addComponent(empresaComboBox, 0, 308, Short.MAX_VALUE)
+                            .addComponent(botaoCondicao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(condicao))))
+                .addGap(19, 19, 19))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {botaoCondicao, botaoTolerancia, descricao, empresaComboBox, faixaMedicao, menorDivisao, modelo, numeroSerie});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {descricao, empresaComboBox, faixaMedicao, menorDivisao, modelo, numeroSerie});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -185,10 +173,10 @@ public class CadastroEquipamentoView extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(botaoCondicao)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
+                .addComponent(condicao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 111, Short.MAX_VALUE)
                 .addComponent(botaoTolerancia)
-                .addGap(29, 29, 29)
+                .addGap(34, 34, 34)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 9, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -214,13 +202,12 @@ public class CadastroEquipamentoView extends javax.swing.JFrame {
     }//GEN-LAST:event_botaoPesquisarActionPerformed
 
     private void botaoCondicaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCondicaoActionPerformed
-        CondicaoView a = new CondicaoView();
-        a.setVisible(true);
+        new CondicaoView(this).setVisible(true);
     }//GEN-LAST:event_botaoCondicaoActionPerformed
 
-    private void botaoToleranciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoToleranciaActionPerformed
+    private void condicaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_condicaoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_botaoToleranciaActionPerformed
+    }//GEN-LAST:event_condicaoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -257,18 +244,17 @@ public class CadastroEquipamentoView extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JToggleButton botaoCondicao;
+    private javax.swing.JButton botaoCondicao;
     private javax.swing.JButton botaoEditar;
     private javax.swing.JButton botaoExcluir;
     private javax.swing.JButton botaoPesquisar;
     private javax.swing.JButton botaoSalvar;
-    private javax.swing.JToggleButton botaoTolerancia;
+    private javax.swing.JButton botaoTolerancia;
+    private javax.swing.JTextField condicao;
     private javax.swing.JTextField descricao;
     private javax.swing.JComboBox empresaComboBox;
     private javax.swing.JTextField faixaMedicao;
-    private javax.swing.JList jList1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTree jTree1;
     private javax.swing.JLabel labelDescricao;

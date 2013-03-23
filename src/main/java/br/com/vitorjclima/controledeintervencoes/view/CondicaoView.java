@@ -1,20 +1,19 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.vitorjclima.controledeintervencoes.view;
 
-/**
- *
- * @author vitor
- */
 public class CondicaoView extends javax.swing.JFrame {
+    
+    private CadastroEquipamentoView equipamento = new CadastroEquipamentoView();
 
     /**
      * Creates new form CondicaoView
      */
     public CondicaoView() {
         initComponents();
+    }
+    
+    public CondicaoView (CadastroEquipamentoView equipamento){
+        initComponents();
+        this.equipamento = equipamento;
     }
 
     /**
@@ -58,7 +57,6 @@ public class CondicaoView extends javax.swing.JFrame {
             ex.printStackTrace();
         }
         data.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        data.setText("  /  /    ");
         data.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dataActionPerformed(evt);
@@ -132,7 +130,7 @@ public class CondicaoView extends javax.swing.JFrame {
     }//GEN-LAST:event_dataActionPerformed
 
     private void botaoSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoSalvarActionPerformed
-        dispose();
+        equipamento.setCondicao(condicaoComboBox.getSelectedItem().toString());
     }//GEN-LAST:event_botaoSalvarActionPerformed
 
     private void botaoCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCancelarActionPerformed
