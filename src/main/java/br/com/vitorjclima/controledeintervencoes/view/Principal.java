@@ -4,16 +4,24 @@
  */
 package br.com.vitorjclima.controledeintervencoes.view;
 
+import java.awt.Cursor;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.InputStreamReader;
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author vitor
  */
 public class Principal extends javax.swing.JFrame {
-    
-    private CadastroEmpresaView cadastroempresa;
-    private CadastroEquipamentoView cadastroequipamento;
-    private CondicaoView condicao;
-    private IntervencaoView intervencao;
+
+    private CadastroEmpresaView empresa = new CadastroEmpresaView();
+    private CadastroEquipamentoView equipamento = new CadastroEquipamentoView();
+    private CondicaoView condicao = new CondicaoView();
+    private IntervencaoView intervencao = new IntervencaoView();
     private PessoaView pessoa = new PessoaView(this);
 
     /**
@@ -21,6 +29,92 @@ public class Principal extends javax.swing.JFrame {
      */
     public Principal() {
         initComponents();
+    }
+
+    public String diretorio() {
+        JFileChooser chooser = new JFileChooser();
+
+        String caminho = "";
+        int retorno = chooser.showSaveDialog(null); // showSaveDialog retorna um inteiro , e ele ira determinar que o chooser será para salvar.
+        if (retorno == JFileChooser.APPROVE_OPTION) {
+            return caminho = chooser.getSelectedFile().getAbsolutePath();  // o getSelectedFile pega o arquivo e o getAbsolutePath retorna uma string contendo o endereço.
+        }
+        return null;
+    }
+
+    private void cursorWait() {
+        Cursor ponteiroMouse = new Cursor(Cursor.WAIT_CURSOR);
+        setCursor(ponteiroMouse);
+    }
+
+    private void cursorDefault() {
+        Cursor ponteiroMouse = new Cursor(Cursor.DEFAULT_CURSOR);
+        setCursor(ponteiroMouse);
+    }
+
+    public void realizarBackup() {
+        String caminho = diretorio() + ".sql";
+
+        if (caminho.equals("")) {
+            caminho = diretorio() + ".sql";
+        } else {
+
+            cursorWait();
+
+            try {
+
+                String comando = "mysqldump -h maxses.com.br -u natura_ContrCal -pdrr_2017-X natura_controle_calibracao";
+
+                Runtime r = Runtime.getRuntime();
+
+                Process p = r.exec(comando);
+
+
+                if (p == null) {
+                    System.out.println("Nao pode conectar...");
+                } else {
+                    System.out.println("Conseguiu conectar...");
+                }
+
+
+                BufferedReader in = new BufferedReader(new InputStreamReader(p.getInputStream()));
+
+                String line;
+
+                FileWriter arquivo = new FileWriter(new File(caminho), true);
+
+                while ((line = in.readLine()) != null) {
+                    if (line != null && !line.trim().equals("")) {
+                        //System.out.println(line);
+
+                        arquivo.write(line + "\n");
+                        arquivo.flush();
+                    }
+
+                }
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(null, ex);
+            }
+            
+        }
+        cursorDefault();
+    }
+
+    public void restauraBackup() {
+        cursorWait();
+
+        try {
+            String comando = "mysql -u natura_ContrCal -pdrr_2017-X -h maxses.com.br natura_controle_calibracao";
+
+            Runtime r = Runtime.getRuntime();
+
+            Process p = r.exec(comando + "< saida.sql");
+
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, ex);
+        }
+        cursorDefault();
+
     }
 
     /**
@@ -65,17 +159,19 @@ public class Principal extends javax.swing.JFrame {
         jMenuItem9 = new javax.swing.JMenuItem();
         jMenuItem25 = new javax.swing.JMenuItem();
         jMenuItem26 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
+        jMenuRelatorio = new javax.swing.JMenu();
         jMenuItem24 = new javax.swing.JMenuItem();
         jMenuItem28 = new javax.swing.JMenuItem();
         jMenuItem27 = new javax.swing.JMenuItem();
-        jMenu3 = new javax.swing.JMenu();
-        jMenuItem29 = new javax.swing.JMenuItem();
-        jMenuItem30 = new javax.swing.JMenuItem();
+        jMenuBackup = new javax.swing.JMenu();
+        jMenuBackupCriar = new javax.swing.JMenuItem();
+        jMenuBackupRestaurar = new javax.swing.JMenuItem();
 
         jMenuItem1.setText("jMenuItem1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Controle de Intervenções de Equipamentos");
+        setExtendedState(MAXIMIZED_BOTH);
 
         menuCadastro.setText("Cadastros");
 
@@ -106,6 +202,11 @@ public class Principal extends javax.swing.JFrame {
         MenuCadastroNovo.add(MenuCadastroNovoCondicao);
 
         MenuCadastroNovoEquipamento.setText("Equipamento");
+        MenuCadastroNovoEquipamento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MenuCadastroNovoEquipamentoActionPerformed(evt);
+            }
+        });
         MenuCadastroNovo.add(MenuCadastroNovoEquipamento);
 
         MenuCadastroNovoFrequencia.setText("Frequência");
@@ -231,7 +332,7 @@ public class Principal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setText("Relatório");
+        jMenuRelatorio.setText("Relatório");
 
         jMenuItem24.setText("Próximas Intervenções");
         jMenuItem24.addActionListener(new java.awt.event.ActionListener() {
@@ -239,7 +340,7 @@ public class Principal extends javax.swing.JFrame {
                 jMenuItem24ActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem24);
+        jMenuRelatorio.add(jMenuItem24);
 
         jMenuItem28.setText("Equipamentos Em Uso");
         jMenuItem28.addActionListener(new java.awt.event.ActionListener() {
@@ -247,7 +348,7 @@ public class Principal extends javax.swing.JFrame {
                 jMenuItem28ActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem28);
+        jMenuRelatorio.add(jMenuItem28);
 
         jMenuItem27.setText("Equipamentos Fora de Uso");
         jMenuItem27.addActionListener(new java.awt.event.ActionListener() {
@@ -255,24 +356,29 @@ public class Principal extends javax.swing.JFrame {
                 jMenuItem27ActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem27);
+        jMenuRelatorio.add(jMenuItem27);
 
-        jMenuBar1.add(jMenu2);
+        jMenuBar1.add(jMenuRelatorio);
 
-        jMenu3.setText("Backup");
+        jMenuBackup.setText("Backup");
 
-        jMenuItem29.setText("Criar");
-        jMenu3.add(jMenuItem29);
-
-        jMenuItem30.setText("Restaurar");
-        jMenuItem30.addActionListener(new java.awt.event.ActionListener() {
+        jMenuBackupCriar.setText("Criar");
+        jMenuBackupCriar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem30ActionPerformed(evt);
+                jMenuBackupCriarActionPerformed(evt);
             }
         });
-        jMenu3.add(jMenuItem30);
+        jMenuBackup.add(jMenuBackupCriar);
 
-        jMenuBar1.add(jMenu3);
+        jMenuBackupRestaurar.setText("Restaurar");
+        jMenuBackupRestaurar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuBackupRestaurarActionPerformed(evt);
+            }
+        });
+        jMenuBackup.add(jMenuBackupRestaurar);
+
+        jMenuBar1.add(jMenuBackup);
 
         setJMenuBar(jMenuBar1);
 
@@ -280,14 +386,15 @@ public class Principal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 800, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 279, Short.MAX_VALUE)
+            .addGap(0, 579, Short.MAX_VALUE)
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void MenuCadastroNovoPessoaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuCadastroNovoPessoaActionPerformed
@@ -344,16 +451,31 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem28ActionPerformed
 
     private void MenuCadastroNovoEmpresaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuCadastroNovoEmpresaActionPerformed
-        // TODO add your handling code here:
+        this.setEnabled(false);
+        empresa.setVisible(true);
     }//GEN-LAST:event_MenuCadastroNovoEmpresaActionPerformed
 
-    private void jMenuItem30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem30ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem30ActionPerformed
+    private void jMenuBackupRestaurarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuBackupRestaurarActionPerformed
+
+        restauraBackup();
+
+    }//GEN-LAST:event_jMenuBackupRestaurarActionPerformed
 
     private void MenuCadastroNovoCondicaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuCadastroNovoCondicaoActionPerformed
-        // TODO add your handling code here:
+        this.setEnabled(false);
+        condicao.setVisible(true);
     }//GEN-LAST:event_MenuCadastroNovoCondicaoActionPerformed
+
+    private void MenuCadastroNovoEquipamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuCadastroNovoEquipamentoActionPerformed
+        this.setEnabled(false);
+        equipamento.setVisible(true);
+    }//GEN-LAST:event_MenuCadastroNovoEquipamentoActionPerformed
+
+    private void jMenuBackupCriarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuBackupCriarActionPerformed
+
+        realizarBackup();
+
+    }//GEN-LAST:event_jMenuBackupCriarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -399,10 +521,11 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenuItem MenuCadastroNovoPessoaSistemaMedicao;
     private javax.swing.JMenuItem MenuCadastroNovoTipoIntervencao;
     private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenu jMenu6;
+    private javax.swing.JMenu jMenuBackup;
+    private javax.swing.JMenuItem jMenuBackupCriar;
+    private javax.swing.JMenuItem jMenuBackupRestaurar;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
@@ -424,9 +547,8 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem26;
     private javax.swing.JMenuItem jMenuItem27;
     private javax.swing.JMenuItem jMenuItem28;
-    private javax.swing.JMenuItem jMenuItem29;
-    private javax.swing.JMenuItem jMenuItem30;
     private javax.swing.JMenuItem jMenuItem9;
+    private javax.swing.JMenu jMenuRelatorio;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JMenu menuCadastro;
