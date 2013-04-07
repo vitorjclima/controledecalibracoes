@@ -4,11 +4,19 @@
  */
 package br.com.vitorjclima.controledeintervencoes.view;
 
+import br.com.vitorjclima.controledeintervencoes.db.BD;
 import java.awt.Cursor;
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
@@ -23,11 +31,22 @@ public class Principal extends javax.swing.JFrame {
     private CondicaoView condicao = new CondicaoView();
     private IntervencaoView intervencao = new IntervencaoView();
     private PessoaView pessoa = new PessoaView(this);
+    FileWriter backup;
+    private BD bd;
+
+    public BD getBd() {
+        return bd;
+    }
+
+    public void setBd(BD bd) {
+        this.bd = bd;
+    }
 
     /**
      * Creates new form Principal
      */
     public Principal() {
+        this.bd = new BD();
         initComponents();
     }
 
@@ -37,7 +56,7 @@ public class Principal extends javax.swing.JFrame {
         String caminho = "";
         int retorno = chooser.showSaveDialog(null); // showSaveDialog retorna um inteiro , e ele ira determinar que o chooser será para salvar.
         if (retorno == JFileChooser.APPROVE_OPTION) {
-            return caminho = chooser.getSelectedFile().getAbsolutePath();  // o getSelectedFile pega o arquivo e o getAbsolutePath retorna uma string contendo o endereço.
+            return caminho = chooser.getSelectedFile().getAbsolutePath();  // o getSelectedFile pega o backup e o getAbsolutePath retorna uma string contendo o endereço.
         }
         return null;
     }
@@ -54,6 +73,7 @@ public class Principal extends javax.swing.JFrame {
 
     public void realizarBackup() {
         String caminho = diretorio() + ".sql";
+        JOptionPane espera = new JOptionPane();
 
         if (caminho.equals("")) {
             caminho = diretorio() + ".sql";
@@ -61,13 +81,20 @@ public class Principal extends javax.swing.JFrame {
 
             cursorWait();
 
+            espera.showMessageDialog(this, "Fazendo Backup ...");
+
+
             try {
 
                 String comando = "mysqldump -h maxses.com.br -u natura_ContrCal -pdrr_2017-X natura_controle_calibracao";
 
                 Runtime r = Runtime.getRuntime();
 
+                System.out.println("r: " + r);
+
                 Process p = r.exec(comando);
+
+                System.out.print("p: " + p);
 
 
                 if (p == null) {
@@ -79,40 +106,89 @@ public class Principal extends javax.swing.JFrame {
 
                 BufferedReader in = new BufferedReader(new InputStreamReader(p.getInputStream()));
 
+
+                System.out.println("Nao pode conectar...");
+
+                System.out.println("Conseguiu conectar...");
+
                 String line;
 
-                FileWriter arquivo = new FileWriter(new File(caminho), true);
+                backup = new FileWriter(new File(caminho), true);
 
                 while ((line = in.readLine()) != null) {
                     if (line != null && !line.trim().equals("")) {
-                        //System.out.println(line);
+                        System.out.println(line);
 
-                        arquivo.write(line + "\n");
-                        arquivo.flush();
+                        backup.write(line + "\n");
+                        backup.flush();
                     }
 
                 }
+
+
+
             } catch (Exception ex) {
                 JOptionPane.showMessageDialog(null, ex);
             }
-            
+
         }
         cursorDefault();
+        espera.showMessageDialog(this, "Backup criado com sucesso.");
     }
 
-    public void restauraBackup() {
+    public void restauraBackup() throws FileNotFoundException, IOException {
         cursorWait();
+        
+        /*
+         * mysql -u <usuario> -p<senha> < mysql.sql
+         */
 
-        try {
-            String comando = "mysql -u natura_ContrCal -pdrr_2017-X -h maxses.com.br natura_controle_calibracao";
+        String comando = "mysql -h maxses.com.br -u natura_ContrCal -pdrr_2017-X natura_controle_calibracao";
 
-            Runtime r = Runtime.getRuntime();
+        Runtime r = Runtime.getRuntime();
 
-            Process p = r.exec(comando + "< saida.sql");
+        System.out.println("r: " + r);
+        
 
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, ex);
-        }
+        Process p = r.exec(comando);
+        
+        OutputStream out = p.getOutputStream();
+        
+        out.write(("source "+diretorio()).getBytes());
+        
+        out.flush();
+        
+        out.close();
+        
+        //r.exec("mysql> source "+diretorio());
+
+
+        //JOptionPane.showMessageDialog(this,"problema");
+
+
+
+
+        /*
+         // try {
+
+         FileInputStream stream = new FileInputStream(diretorio());
+         InputStreamReader reader = new InputStreamReader(stream);
+         BufferedReader br = new BufferedReader(reader);
+         String linha = br.readLine();
+
+         String comando = new String();
+         while (linha != null) {
+         comando = comando + "\n"+ linha;
+         linha = br.readLine();
+         }
+         bd.executa(comando);
+
+         System.out.println(comando);
+         } catch (Exception ex) {
+         cursorDefault();
+         JOptionPane.showMessageDialog(null, "pau");
+         }
+         */
         cursorDefault();
 
     }
@@ -172,6 +248,7 @@ public class Principal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Controle de Intervenções de Equipamentos");
         setExtendedState(MAXIMIZED_BOTH);
+        setResizable(false);
 
         menuCadastro.setText("Cadastros");
 
@@ -456,8 +533,13 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_MenuCadastroNovoEmpresaActionPerformed
 
     private void jMenuBackupRestaurarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuBackupRestaurarActionPerformed
-
-        restauraBackup();
+        try {
+            restauraBackup();
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
     }//GEN-LAST:event_jMenuBackupRestaurarActionPerformed
 

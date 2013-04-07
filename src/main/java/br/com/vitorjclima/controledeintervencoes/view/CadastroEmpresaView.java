@@ -38,7 +38,7 @@ public class CadastroEmpresaView extends javax.swing.JFrame {
         botaoPesquisar = new javax.swing.JButton();
         cnpj = new javax.swing.JFormattedTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Cadastro de Empresa");
 
         labelRazaoSocial.setText("Razão Social");
 

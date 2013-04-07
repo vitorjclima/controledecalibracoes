@@ -38,6 +38,7 @@ public class CondicaoView extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Definir condição");
         setAlwaysOnTop(true);
+        setUndecorated(true);
 
         labelCondicao.setText("Condição");
 

@@ -18,10 +18,10 @@
     <class>br.com.vitorjclima.controledeintervencoes.db.IntervencaoTipo</class>
     <class>br.com.vitorjclima.controledeintervencoes.db.SistemaMedicao</class>
     <properties>
-      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/controle_calibracao"/>
-      <property name="javax.persistence.jdbc.password" value="senha"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://maxses.com.br:3306/natura_controle_calibracao?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.password" value="drr_2017-X"/>
       <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
-      <property name="javax.persistence.jdbc.user" value="usuario"/>
+      <property name="javax.persistence.jdbc.user" value="natura_ContrCal"/>
       <property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>
     </properties>
   </persistence-unit>

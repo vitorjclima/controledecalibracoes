@@ -47,7 +47,7 @@ public class CadastroEquipamentoView extends javax.swing.JFrame {
 
         jScrollPane1.setViewportView(jTree1);
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Cadastro de Equipamento");
 
         labelDescricao.setText("Descrição");
 
@@ -191,6 +191,7 @@ public class CadastroEquipamentoView extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void botaoSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoSalvarActionPerformed
