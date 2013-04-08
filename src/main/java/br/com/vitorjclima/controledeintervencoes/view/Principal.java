@@ -8,9 +8,7 @@ import br.com.vitorjclima.controledeintervencoes.db.BD;
 import java.awt.Cursor;
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -71,18 +69,17 @@ public class Principal extends javax.swing.JFrame {
         setCursor(ponteiroMouse);
     }
 
+    public void aguarde(Process p, Runtime r) {
+    }
+
     public void realizarBackup() {
         String caminho = diretorio() + ".sql";
-        JOptionPane espera = new JOptionPane();
 
         if (caminho.equals("")) {
             caminho = diretorio() + ".sql";
         } else {
 
             cursorWait();
-
-            espera.showMessageDialog(this, "Fazendo Backup ...");
-
 
             try {
 
@@ -106,11 +103,6 @@ public class Principal extends javax.swing.JFrame {
 
                 BufferedReader in = new BufferedReader(new InputStreamReader(p.getInputStream()));
 
-
-                System.out.println("Nao pode conectar...");
-
-                System.out.println("Conseguiu conectar...");
-
                 String line;
 
                 backup = new FileWriter(new File(caminho), true);
@@ -126,6 +118,9 @@ public class Principal extends javax.swing.JFrame {
                 }
 
 
+                System.out.println(r);
+                System.out.println(p);
+
 
             } catch (Exception ex) {
                 JOptionPane.showMessageDialog(null, ex);
@@ -133,63 +128,37 @@ public class Principal extends javax.swing.JFrame {
 
         }
         cursorDefault();
-        espera.showMessageDialog(this, "Backup criado com sucesso.");
+        new JOptionPane().showMessageDialog(this, "Backup criado com sucesso.");
     }
 
     public void restauraBackup() throws FileNotFoundException, IOException {
-        cursorWait();
-        
+
+        JOptionPane tela = new JOptionPane();
         /*
          * mysql -u <usuario> -p<senha> < mysql.sql
          */
-
         String comando = "mysql -h maxses.com.br -u natura_ContrCal -pdrr_2017-X natura_controle_calibracao";
 
         Runtime r = Runtime.getRuntime();
 
-        System.out.println("r: " + r);
-        
-
         Process p = r.exec(comando);
-        
+
         OutputStream out = p.getOutputStream();
-        
-        out.write(("source "+diretorio()).getBytes());
-        
+
+        out.write(("source " + diretorio()).getBytes());
+        cursorWait();
+
         out.flush();
-        
+
         out.close();
-        
-        //r.exec("mysql> source "+diretorio());
-
-
-        //JOptionPane.showMessageDialog(this,"problema");
-
-
-
-
-        /*
-         // try {
-
-         FileInputStream stream = new FileInputStream(diretorio());
-         InputStreamReader reader = new InputStreamReader(stream);
-         BufferedReader br = new BufferedReader(reader);
-         String linha = br.readLine();
-
-         String comando = new String();
-         while (linha != null) {
-         comando = comando + "\n"+ linha;
-         linha = br.readLine();
-         }
-         bd.executa(comando);
-
-         System.out.println(comando);
-         } catch (Exception ex) {
-         cursorDefault();
-         JOptionPane.showMessageDialog(null, "pau");
-         }
-         */
-        cursorDefault();
+        try {
+            while (p.waitFor() == 1) {
+            }
+        } catch (InterruptedException ex) {
+            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        tela.showMessageDialog(this, "Backup Restaurado com sucesso.");
+        p.destroy();
 
     }
 
@@ -231,8 +200,8 @@ public class Principal extends javax.swing.JFrame {
         jMenuItem21 = new javax.swing.JMenuItem();
         jMenuItem22 = new javax.swing.JMenuItem();
         jMenuItem23 = new javax.swing.JMenuItem();
-        jMenu1 = new javax.swing.JMenu();
-        jMenuItem9 = new javax.swing.JMenuItem();
+        jMenuIntervencoes = new javax.swing.JMenu();
+        jMenuIntervencoesNovo = new javax.swing.JMenuItem();
         jMenuItem25 = new javax.swing.JMenuItem();
         jMenuItem26 = new javax.swing.JMenuItem();
         jMenuRelatorio = new javax.swing.JMenu();
@@ -391,10 +360,15 @@ public class Principal extends javax.swing.JFrame {
 
         jMenuBar1.add(menuCadastro);
 
-        jMenu1.setText("Intervenções");
+        jMenuIntervencoes.setText("Intervenções");
 
-        jMenuItem9.setText("Novo");
-        jMenu1.add(jMenuItem9);
+        jMenuIntervencoesNovo.setText("Novo");
+        jMenuIntervencoesNovo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuIntervencoesNovoActionPerformed(evt);
+            }
+        });
+        jMenuIntervencoes.add(jMenuIntervencoesNovo);
 
         jMenuItem25.setText("Editar");
         jMenuItem25.addActionListener(new java.awt.event.ActionListener() {
@@ -402,12 +376,12 @@ public class Principal extends javax.swing.JFrame {
                 jMenuItem25ActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem25);
+        jMenuIntervencoes.add(jMenuItem25);
 
         jMenuItem26.setText("Excluir");
-        jMenu1.add(jMenuItem26);
+        jMenuIntervencoes.add(jMenuItem26);
 
-        jMenuBar1.add(jMenu1);
+        jMenuBar1.add(jMenuIntervencoes);
 
         jMenuRelatorio.setText("Relatório");
 
@@ -535,14 +509,15 @@ public class Principal extends javax.swing.JFrame {
     private void jMenuBackupRestaurarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuBackupRestaurarActionPerformed
         try {
             restauraBackup();
+            cursorDefault();
         } catch (FileNotFoundException ex) {
             Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
             Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-    }//GEN-LAST:event_jMenuBackupRestaurarActionPerformed
 
+    }//GEN-LAST:event_jMenuBackupRestaurarActionPerformed
     private void MenuCadastroNovoCondicaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuCadastroNovoCondicaoActionPerformed
         this.setEnabled(false);
         condicao.setVisible(true);
@@ -559,6 +534,9 @@ public class Principal extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jMenuBackupCriarActionPerformed
 
+    private void jMenuIntervencoesNovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuIntervencoesNovoActionPerformed
+    }//GEN-LAST:event_jMenuIntervencoesNovoActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -573,16 +551,22 @@ public class Principal extends javax.swing.JFrame {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
+
+
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Principal.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Principal.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Principal.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Principal.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
@@ -602,13 +586,14 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenuItem MenuCadastroNovoPessoa;
     private javax.swing.JMenuItem MenuCadastroNovoPessoaSistemaMedicao;
     private javax.swing.JMenuItem MenuCadastroNovoTipoIntervencao;
-    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenu jMenu6;
     private javax.swing.JMenu jMenuBackup;
     private javax.swing.JMenuItem jMenuBackupCriar;
     private javax.swing.JMenuItem jMenuBackupRestaurar;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenu jMenuIntervencoes;
+    private javax.swing.JMenuItem jMenuIntervencoesNovo;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem11;
@@ -629,7 +614,6 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem26;
     private javax.swing.JMenuItem jMenuItem27;
     private javax.swing.JMenuItem jMenuItem28;
-    private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JMenu jMenuRelatorio;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
