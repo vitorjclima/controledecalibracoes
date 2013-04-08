@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.vitorjclima.controledeintervencoes.view;
 
 import br.com.vitorjclima.controledeintervencoes.db.BD;
@@ -13,6 +9,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
+import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFileChooser;
@@ -40,9 +37,6 @@ public class Principal extends javax.swing.JFrame {
         this.bd = bd;
     }
 
-    /**
-     * Creates new form Principal
-     */
     public Principal() {
         this.bd = new BD();
         initComponents();
@@ -59,6 +53,30 @@ public class Principal extends javax.swing.JFrame {
         return null;
     }
 
+    public boolean verificaConexao() {
+        try {
+            bd.conecta_BD();
+        } catch (SQLException ex) {
+            cursorDefault();
+
+
+            //Excessão para conexão com Internet/BD
+            if (ex.getErrorCode() == 0) {
+                JOptionPane.showMessageDialog(this, "Falha na conexão com o banco de dados,\nVerifique sua conexão com a internet");
+                return false;
+            } //Excessão para Usuário e/ou Senha Inválidos
+            else if (ex.getErrorCode() == 1045) {
+                JOptionPane.showMessageDialog(this, "Usuario e/ou Senha Inválidos");
+                return false;
+            }
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Falha ao Inicializar");
+            return false;
+        }
+        return true;
+    }
+
     private void cursorWait() {
         Cursor ponteiroMouse = new Cursor(Cursor.WAIT_CURSOR);
         setCursor(ponteiroMouse);
@@ -69,96 +87,85 @@ public class Principal extends javax.swing.JFrame {
         setCursor(ponteiroMouse);
     }
 
-    public void aguarde(Process p, Runtime r) {
-    }
-
     public void realizarBackup() {
-        String caminho = diretorio() + ".sql";
+        if (verificaConexao() == true) {
+            String caminho;
+            String dir = diretorio();
+            if (dir == null) {
+                JOptionPane.showMessageDialog(this, "Nenhum Arquivo de Backup Foi Criado");
+            } else {
+                caminho = dir + ".sql";
+                cursorWait();
 
-        if (caminho.equals("")) {
-            caminho = diretorio() + ".sql";
-        } else {
+                try {
 
-            cursorWait();
+                    String comando = "mysqldump -h maxses.com.br -u natura_ContrCal -pdrr_2017-X natura_controle_calibracao";
 
-            try {
+                    Runtime r = Runtime.getRuntime();
 
-                String comando = "mysqldump -h maxses.com.br -u natura_ContrCal -pdrr_2017-X natura_controle_calibracao";
+                    Process p = r.exec(comando);
 
-                Runtime r = Runtime.getRuntime();
+                    BufferedReader in = new BufferedReader(new InputStreamReader(p.getInputStream()));
 
-                System.out.println("r: " + r);
+                    String line;
 
-                Process p = r.exec(comando);
+                    backup = new FileWriter(new File(caminho), true);
 
-                System.out.print("p: " + p);
+                    while ((line = in.readLine()) != null) {
+                        if (line != null && !line.trim().equals("")) {
+                            backup.write(line + "\n");
+                            backup.flush();
+                        }
 
-
-                if (p == null) {
-                    System.out.println("Nao pode conectar...");
-                } else {
-                    System.out.println("Conseguiu conectar...");
-                }
-
-
-                BufferedReader in = new BufferedReader(new InputStreamReader(p.getInputStream()));
-
-                String line;
-
-                backup = new FileWriter(new File(caminho), true);
-
-                while ((line = in.readLine()) != null) {
-                    if (line != null && !line.trim().equals("")) {
-                        System.out.println(line);
-
-                        backup.write(line + "\n");
-                        backup.flush();
                     }
-
+                } catch (Exception ex) {
+                    JOptionPane.showMessageDialog(null, ex);
                 }
-
-
-                System.out.println(r);
-                System.out.println(p);
-
-
-            } catch (Exception ex) {
-                JOptionPane.showMessageDialog(null, ex);
+                new JOptionPane().showMessageDialog(this, "Backup criado com sucesso.");
             }
-
+            cursorDefault();
         }
-        cursorDefault();
-        new JOptionPane().showMessageDialog(this, "Backup criado com sucesso.");
     }
 
     public void restauraBackup() throws FileNotFoundException, IOException {
+        if (verificaConexao() == true) {
 
-        JOptionPane tela = new JOptionPane();
-        /*
-         * mysql -u <usuario> -p<senha> < mysql.sql
-         */
-        String comando = "mysql -h maxses.com.br -u natura_ContrCal -pdrr_2017-X natura_controle_calibracao";
+            JOptionPane tela = new JOptionPane();
+            /*
+             * mysql -u <usuario> -p<senha> < mysql.sql
+             */
+            String comando = "mysql -h maxses.com.br -u natura_ContrCal -pdrr_2017-X natura_controle_calibracao";
+            String dir = diretorio();
 
-        Runtime r = Runtime.getRuntime();
+            if (dir == null) {
+                JOptionPane.showMessageDialog(this, "Nenhum Arquivo de Backup Selecionado");
+            } else {
 
-        Process p = r.exec(comando);
 
-        OutputStream out = p.getOutputStream();
+                Runtime r = Runtime.getRuntime();
 
-        out.write(("source " + diretorio()).getBytes());
-        cursorWait();
+                Process p = r.exec(comando);
 
-        out.flush();
+                OutputStream out = p.getOutputStream();
 
-        out.close();
-        try {
-            while (p.waitFor() == 1) {
+                out.write(("source " + dir).getBytes());
+                cursorWait();
+
+                out.flush();
+
+                out.close();
+                try {
+                    while (p.waitFor() == 1) {
+                    }
+                } catch (InterruptedException ex) {
+                    Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                tela.showMessageDialog(this, "Backup Restaurado com sucesso.");
+                p.destroy();
             }
-        } catch (InterruptedException ex) {
-            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
+
         }
-        tela.showMessageDialog(this, "Backup Restaurado com sucesso.");
-        p.destroy();
+
 
     }
 
