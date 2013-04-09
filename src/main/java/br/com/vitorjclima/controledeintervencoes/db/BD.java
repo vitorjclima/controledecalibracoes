@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.vitorjclima.controledeintervencoes.db;
 
 import com.mysql.jdbc.Statement;
@@ -21,6 +17,14 @@ public class BD {
      private String login;
      private String senha;
 
+    public String getLogin() {
+        return login;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
     public BD() {
     }
 
@@ -31,36 +35,25 @@ public class BD {
 
         Class.forName(driver);
         conexao = DriverManager.getConnection(url, login, senha);
+        
     }
 
-    public void executa(String sql) {
-        Statement st = null;
-        try {
-           st = (Statement) conexao.createStatement();
-        } catch (SQLException ex) {
-            System.out.println(ex);
-        }
-        try {
-            //st.executeUpdate(sql);
-            if (st.execute(sql)==false){
-                System.out.println("Erro de execução de comando");
-            }
-            
-        } catch (SQLException ex) {
-            System.out.println(ex);
-        }
-    }
-
-    public void close() {
+    public boolean close() {
         try {
             conexao.close();
+            return true;
         } catch (SQLException ex) {
             Logger.getLogger(BD.class.getName()).log(Level.SEVERE, null, ex);
         }
+        return false;
     }
 
     public void set_login(String usuario, String senha) {
         this.login = usuario;
         this.senha = senha;
+    }
+
+    public Connection getConexao() {
+        return conexao;
     }
 }

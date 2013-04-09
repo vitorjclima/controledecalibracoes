@@ -11,7 +11,6 @@ import javax.swing.JOptionPane;
  */
 public class Login extends javax.swing.JFrame {
 
-    static int status = 0;
     private BD bd;
 
     public Login() {
@@ -118,28 +117,31 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_usuarioActionPerformed
 
-    public void abre_sessao(String login, String senha) {
+    public boolean abre_sessao(String login, String senha) {
 
         bd.set_login(login, senha);
 
         try {
             bd.conecta_BD();
-            status = 1;
+            return true;
         } catch (SQLException ex) {
             cursorDefault();
 
             //Excessão para conexão com Internet/BD
             if (ex.getErrorCode() == 0) {
                 JOptionPane.showMessageDialog(this, "Falha na conexão com o banco de dados,\nVerifique sua conexão com a internet");
+                return false;
             } //Excessão para Usuário e/ou Senha Inválidos
             else if (ex.getErrorCode() == 1045) {
                 JOptionPane.showMessageDialog(this, "Usuario e/ou Senha Inválidos");
+                return false;
             }
 
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Falha ao Inicializar");
-
+            return false;
         }
+        return false;
     }
 
     private void cursorWait() {
@@ -154,9 +156,8 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton_EntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_EntrarActionPerformed
         cursorWait();
-        abre_sessao(usuario.getText(), senha.getText());
-
-        if (status == 1) {
+        
+        if (abre_sessao(usuario.getText(), senha.getText()) == true) {
             Principal p = new Principal();
             p.setBd(bd);
             p.setVisible(true);

@@ -209,12 +209,12 @@ public class Principal extends javax.swing.JFrame {
         jMenuItem23 = new javax.swing.JMenuItem();
         jMenuIntervencoes = new javax.swing.JMenu();
         jMenuIntervencoesNovo = new javax.swing.JMenuItem();
-        jMenuItem25 = new javax.swing.JMenuItem();
-        jMenuItem26 = new javax.swing.JMenuItem();
+        jMenuIntervencoesEditar = new javax.swing.JMenuItem();
+        jMenuIntervencoesExcluir = new javax.swing.JMenuItem();
         jMenuRelatorio = new javax.swing.JMenu();
-        jMenuItem24 = new javax.swing.JMenuItem();
-        jMenuItem28 = new javax.swing.JMenuItem();
-        jMenuItem27 = new javax.swing.JMenuItem();
+        jMenuRelatorioProximasIntervencoes = new javax.swing.JMenuItem();
+        jMenuRelatorioEquipamentosEmUso = new javax.swing.JMenuItem();
+        jMenuRelatorioEquipamentosForaDeUso = new javax.swing.JMenuItem();
         jMenuBackup = new javax.swing.JMenu();
         jMenuBackupCriar = new javax.swing.JMenuItem();
         jMenuBackupRestaurar = new javax.swing.JMenuItem();
@@ -377,44 +377,44 @@ public class Principal extends javax.swing.JFrame {
         });
         jMenuIntervencoes.add(jMenuIntervencoesNovo);
 
-        jMenuItem25.setText("Editar");
-        jMenuItem25.addActionListener(new java.awt.event.ActionListener() {
+        jMenuIntervencoesEditar.setText("Editar");
+        jMenuIntervencoesEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem25ActionPerformed(evt);
+                jMenuIntervencoesEditarActionPerformed(evt);
             }
         });
-        jMenuIntervencoes.add(jMenuItem25);
+        jMenuIntervencoes.add(jMenuIntervencoesEditar);
 
-        jMenuItem26.setText("Excluir");
-        jMenuIntervencoes.add(jMenuItem26);
+        jMenuIntervencoesExcluir.setText("Excluir");
+        jMenuIntervencoes.add(jMenuIntervencoesExcluir);
 
         jMenuBar1.add(jMenuIntervencoes);
 
         jMenuRelatorio.setText("Relatório");
 
-        jMenuItem24.setText("Próximas Intervenções");
-        jMenuItem24.addActionListener(new java.awt.event.ActionListener() {
+        jMenuRelatorioProximasIntervencoes.setText("Próximas Intervenções");
+        jMenuRelatorioProximasIntervencoes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem24ActionPerformed(evt);
+                jMenuRelatorioProximasIntervencoesActionPerformed(evt);
             }
         });
-        jMenuRelatorio.add(jMenuItem24);
+        jMenuRelatorio.add(jMenuRelatorioProximasIntervencoes);
 
-        jMenuItem28.setText("Equipamentos Em Uso");
-        jMenuItem28.addActionListener(new java.awt.event.ActionListener() {
+        jMenuRelatorioEquipamentosEmUso.setText("Equipamentos Em Uso");
+        jMenuRelatorioEquipamentosEmUso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem28ActionPerformed(evt);
+                jMenuRelatorioEquipamentosEmUsoActionPerformed(evt);
             }
         });
-        jMenuRelatorio.add(jMenuItem28);
+        jMenuRelatorio.add(jMenuRelatorioEquipamentosEmUso);
 
-        jMenuItem27.setText("Equipamentos Fora de Uso");
-        jMenuItem27.addActionListener(new java.awt.event.ActionListener() {
+        jMenuRelatorioEquipamentosForaDeUso.setText("Equipamentos Fora de Uso");
+        jMenuRelatorioEquipamentosForaDeUso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem27ActionPerformed(evt);
+                jMenuRelatorioEquipamentosForaDeUsoActionPerformed(evt);
             }
         });
-        jMenuRelatorio.add(jMenuItem27);
+        jMenuRelatorio.add(jMenuRelatorioEquipamentosForaDeUso);
 
         jMenuBar1.add(jMenuRelatorio);
 
@@ -492,21 +492,21 @@ public class Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem23ActionPerformed
 
-    private void jMenuItem25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem25ActionPerformed
+    private void jMenuIntervencoesEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuIntervencoesEditarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem25ActionPerformed
+    }//GEN-LAST:event_jMenuIntervencoesEditarActionPerformed
 
-    private void jMenuItem24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem24ActionPerformed
+    private void jMenuRelatorioProximasIntervencoesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuRelatorioProximasIntervencoesActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem24ActionPerformed
+    }//GEN-LAST:event_jMenuRelatorioProximasIntervencoesActionPerformed
 
-    private void jMenuItem27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem27ActionPerformed
+    private void jMenuRelatorioEquipamentosForaDeUsoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuRelatorioEquipamentosForaDeUsoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem27ActionPerformed
+    }//GEN-LAST:event_jMenuRelatorioEquipamentosForaDeUsoActionPerformed
 
-    private void jMenuItem28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem28ActionPerformed
+    private void jMenuRelatorioEquipamentosEmUsoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuRelatorioEquipamentosEmUsoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem28ActionPerformed
+    }//GEN-LAST:event_jMenuRelatorioEquipamentosEmUsoActionPerformed
 
     private void MenuCadastroNovoEmpresaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuCadastroNovoEmpresaActionPerformed
         this.setEnabled(false);
@@ -600,6 +600,8 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuBackupRestaurar;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu jMenuIntervencoes;
+    private javax.swing.JMenuItem jMenuIntervencoesEditar;
+    private javax.swing.JMenuItem jMenuIntervencoesExcluir;
     private javax.swing.JMenuItem jMenuIntervencoesNovo;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
@@ -616,12 +618,10 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem21;
     private javax.swing.JMenuItem jMenuItem22;
     private javax.swing.JMenuItem jMenuItem23;
-    private javax.swing.JMenuItem jMenuItem24;
-    private javax.swing.JMenuItem jMenuItem25;
-    private javax.swing.JMenuItem jMenuItem26;
-    private javax.swing.JMenuItem jMenuItem27;
-    private javax.swing.JMenuItem jMenuItem28;
     private javax.swing.JMenu jMenuRelatorio;
+    private javax.swing.JMenuItem jMenuRelatorioEquipamentosEmUso;
+    private javax.swing.JMenuItem jMenuRelatorioEquipamentosForaDeUso;
+    private javax.swing.JMenuItem jMenuRelatorioProximasIntervencoes;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JMenu menuCadastro;
