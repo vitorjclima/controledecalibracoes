@@ -88,6 +88,8 @@ public class Principal extends javax.swing.JFrame {
     }
 
     public void realizarBackup() {
+        System.getProperty("os.name");
+        
         if (verificaConexao() == true) {
             String caminho;
             String dir = diretorio();
@@ -127,7 +129,9 @@ public class Principal extends javax.swing.JFrame {
         }
     }
 
-    public void restauraBackup() throws FileNotFoundException, IOException {
+    private void restauraBackup() throws FileNotFoundException, IOException {
+        
+        System.getProperty("os.name");
         if (verificaConexao() == true) {
 
             JOptionPane tela = new JOptionPane();

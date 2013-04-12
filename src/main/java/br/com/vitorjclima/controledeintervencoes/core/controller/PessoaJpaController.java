@@ -21,19 +21,20 @@ import javax.persistence.criteria.Root;
  * @author vitor
  */
 public class PessoaJpaController implements Serializable {
-private EntityManagerFactory emf = null;
+
+    private EntityManagerFactory emf = null;
+
     public PessoaJpaController(EntityManagerFactory emf) {
         this.emf = emf;
     }
 
     public PessoaJpaController() {
         this.createEntityManagerFactory();
-        
+
     }
-    
 
     public EntityManager getEntityManager() {
-        if (this.emf == null){
+        if (this.emf == null) {
             this.createEntityManagerFactory();
         }
         return emf.createEntityManager();
@@ -47,9 +48,7 @@ private EntityManagerFactory emf = null;
             em.persist(pessoa);
             em.getTransaction().commit();
         } finally {
-            if (em != null) {
-                em.close();
-            }
+            em.close();
         }
     }
 
@@ -96,7 +95,8 @@ private EntityManagerFactory emf = null;
             }
         }
     }
-
+    
+    
     public List<Pessoa> findPessoaEntities() {
         return findPessoaEntities(true, -1, -1);
     }
@@ -146,5 +146,19 @@ private EntityManagerFactory emf = null;
     private void createEntityManagerFactory() {
         this.emf = Persistence.createEntityManagerFactory("ControleDeIntervencoesUP");
     }
-    
+
+    public Pessoa findPessoa(String cpf) {
+
+        EntityManager em = getEntityManager();
+        try {
+            em.getTransaction().begin();
+            Query createNamedQuery = em.createNamedQuery("Pessoa.findByPessoaCpf");
+
+            createNamedQuery.setParameter("pessoaCpf", cpf);
+            em.getTransaction().commit();
+            return (Pessoa) createNamedQuery.getSingleResult();
+        } finally {
+            em.close();
+        }
+    }
 }

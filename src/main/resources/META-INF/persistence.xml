@@ -22,7 +22,6 @@
       <property name="javax.persistence.jdbc.password" value="drr_2017-X"/>
       <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
       <property name="javax.persistence.jdbc.user" value="natura_ContrCal"/>
-      <property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>
     </properties>
   </persistence-unit>
 </persistence>
