@@ -139,5 +139,4 @@ public class EquipamentoJpaController implements Serializable {
             em.close();
         }
     }
-    
 }

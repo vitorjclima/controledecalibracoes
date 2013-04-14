@@ -8,7 +8,6 @@ import br.com.vitorjclima.controledeintervencoes.core.controller.PessoaJpaContro
 import br.com.vitorjclima.controledeintervencoes.core.controller.exceptions.NonexistentEntityException;
 import br.com.vitorjclima.controledeintervencoes.db.Pessoa;
 import java.awt.Cursor;
-import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -17,11 +16,12 @@ import javax.swing.JOptionPane;
  *
  * @author vitor
  */
-public class PessoaView extends javax.swing.JFrame {
+public class PessoaView extends javax.swing.JFrame{
 
     private PessoaJpaController pessoaController;
     private Pessoa pessoa;
     private Principal principal;
+    private boolean editar;
 
     /**
      * Creates new form PessoaView
@@ -40,15 +40,12 @@ public class PessoaView extends javax.swing.JFrame {
         botaoEditar.setEnabled(false);
         botaoExcluir.setEnabled(false);
         botaoSalvar.setEnabled(false);
-        //botaoNovo.setEnabled(false);
-
         enableCampos(false);
     }
 
     private void enableCampos(boolean x) {
 
         if (x == false) {
-
             nome.setEnabled(x);
             cpf.setEnabled(x);
             email.setEnabled(x);
@@ -57,7 +54,14 @@ public class PessoaView extends javax.swing.JFrame {
             cpf.setEnabled(x);
             email.setEnabled(x);
         }
+    }
 
+    public boolean getEditar() {
+        return editar;
+    }
+
+    public void setEditar(boolean editar) {
+        this.editar = editar;
     }
 
     private void apagaConteudo() {
@@ -66,9 +70,8 @@ public class PessoaView extends javax.swing.JFrame {
         email.setText(null);
         pesquisar.setText(null);
     }
-    
-    
-        private void cursorWait() {
+
+    private void cursorWait() {
         Cursor ponteiroMouse = new Cursor(Cursor.WAIT_CURSOR);
         setCursor(ponteiroMouse);
     }
@@ -147,6 +150,8 @@ public class PessoaView extends javax.swing.JFrame {
             ex.printStackTrace();
         }
         pesquisar.setToolTipText("");
+
+        panelBotoes.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         botaoNovo.setText("Novo");
         botaoNovo.addActionListener(new java.awt.event.ActionListener() {
@@ -271,28 +276,54 @@ public class PessoaView extends javax.swing.JFrame {
     }//GEN-LAST:event_emailActionPerformed
 
     private void botaoSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoSalvarActionPerformed
-        this.pessoa = new Pessoa();
-        this.pessoa.setPessoaNome(nome.getText());
-        this.pessoa.setPessoaCpf(cpf.getText());
-        this.pessoa.setPessoaEmail(email.getText());
 
-        if (nome.getText().equals("") || cpf.getText().equals("   .   .   -  ") || email.getText().equals("")) {
-            JOptionPane.showMessageDialog(this, "Você deve preencher todos os campos");
+
+        if (editar == false) {
+
+            this.pessoa = new Pessoa();
+            this.pessoa.setPessoaNome(nome.getText());
+            this.pessoa.setPessoaCpf(cpf.getText());
+            this.pessoa.setPessoaEmail(email.getText());
+
+            if (nome.getText().equals("") || cpf.getText().equals("   .   .   -  ") || email.getText().equals("")) {
+                JOptionPane.showMessageDialog(this, "Você deve preencher todos os campos");
+            } else {
+
+                try {
+                    cursorWait();
+                    pessoaController.findPessoa(cpf.getText());
+                    JOptionPane.showMessageDialog(this, "Já existe uma pessoa cadastrada com este CPF");
+                    cursorDefault();
+                } catch (Exception e) {
+                    cursorWait();
+                    this.pessoaController.create(pessoa);
+                    JOptionPane.showMessageDialog(this, "Cadastro efetuado com sucesso");
+                    this.dispose();
+                    this.principal.setEnabled(true);
+                    cursorDefault();
+                }
+            }
         } else {
 
-            try {
-                cursorWait();
-                pessoaController.findPessoa(cpf.getText());
-                JOptionPane.showMessageDialog(this, "Já existe uma pessoa cadastrada com este CPF");
-                cursorDefault();
-            } catch (Exception e) {
-                cursorWait();
-                this.pessoaController.create(pessoa);
-                JOptionPane.showMessageDialog(this, "Cadastro efetuado com sucesso");
-                this.dispose();
-                this.principal.setEnabled(true);
-                cursorDefault();
+            this.pessoa.setPessoaNome(nome.getText());
+            this.pessoa.setPessoaCpf(cpf.getText());
+            this.pessoa.setPessoaEmail(email.getText());
+
+            if (nome.getText().equals("") || cpf.getText().equals("   .   .   -  ") || email.getText().equals("")) {
+                JOptionPane.showMessageDialog(this, "Você deve preencher todos os campos");
+            } else {
+                try {
+                    cursorWait();
+                    this.pessoaController.edit(pessoa);
+                    JOptionPane.showMessageDialog(this, "Cadastro alterado com sucesso");
+                    this.dispose();
+                    this.principal.setEnabled(true);
+                    cursorDefault();
+                } catch (Exception ex) {
+                    Logger.getLogger(PessoaView.class.getName()).log(Level.SEVERE, null, ex);             
+                }
             }
+
         }
     }//GEN-LAST:event_botaoSalvarActionPerformed
 
@@ -328,6 +359,7 @@ public class PessoaView extends javax.swing.JFrame {
 
     private void botaoEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoEditarActionPerformed
         enableCampos(true);
+        setEditar(true);
     }//GEN-LAST:event_botaoEditarActionPerformed
 
     private void botaoNovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoNovoActionPerformed

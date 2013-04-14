@@ -12,6 +12,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Query;
 import javax.persistence.EntityNotFoundException;
+import javax.persistence.Persistence;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
@@ -21,13 +22,25 @@ import javax.persistence.criteria.Root;
  */
 public class EmpresaJpaController implements Serializable {
 
+    private EntityManagerFactory emf = null;
+
     public EmpresaJpaController(EntityManagerFactory emf) {
         this.emf = emf;
     }
-    private EntityManagerFactory emf = null;
+
+    public EmpresaJpaController() {
+        this.createEntityManagerFactory();
+    }
 
     public EntityManager getEntityManager() {
+        if (this.emf == null) {
+            this.createEntityManagerFactory();
+        }
         return emf.createEntityManager();
+    }
+
+    private void createEntityManagerFactory() {
+        this.emf = Persistence.createEntityManagerFactory("ControleDeIntervencoesUP");
     }
 
     public void create(Empresa empresa) {
@@ -121,6 +134,19 @@ public class EmpresaJpaController implements Serializable {
         }
     }
 
+    public Empresa findEmpresa(String cnpj) {
+        EntityManager em = getEntityManager();
+        try {
+            em.getTransaction().begin();
+            Query createNamedQuery = em.createNamedQuery("Empresa.findByEmpresaCnpj");
+            createNamedQuery.setParameter("empresaCnpj", cnpj);
+            em.getTransaction().commit();
+            return (Empresa) createNamedQuery.getSingleResult();
+        } finally {
+            em.close();
+        }
+    }
+
     public int getEmpresaCount() {
         EntityManager em = getEntityManager();
         try {
@@ -133,5 +159,4 @@ public class EmpresaJpaController implements Serializable {
             em.close();
         }
     }
-    
 }
