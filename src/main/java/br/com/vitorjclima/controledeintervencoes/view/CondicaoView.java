@@ -1,19 +1,52 @@
 package br.com.vitorjclima.controledeintervencoes.view;
 
+import br.com.vitorjclima.controledeintervencoes.core.controller.CondicaoJpaController;
+import br.com.vitorjclima.controledeintervencoes.db.Condicao;
+import java.awt.Cursor;
+import java.sql.Date;
+import javax.swing.JOptionPane;
+
 public class CondicaoView extends javax.swing.JFrame {
-    
-    private CadastroEquipamentoView equipamento = new CadastroEquipamentoView();
+
+    private CondicaoJpaController condicaoController;
+    private Condicao condicao;
+    //private Principal principal;
+    //private boolean editar;
+    private Integer equipamentoId;
 
     /**
      * Creates new form CondicaoView
      */
+    public CondicaoView(Integer equipamentoId) {
+        initComponents();
+        condicaoController = new CondicaoJpaController(null);
+        this.equipamentoId = equipamentoId;
+
+    }
+
     public CondicaoView() {
         initComponents();
+        condicaoController = new CondicaoJpaController(null);
+        this.equipamentoId = equipamentoId;
+
     }
-    
-    public CondicaoView (CadastroEquipamentoView equipamento){
+
+    private void apagaConteudo() {
+        data.setText(null);
+    }
+
+    private void cursorWait() {
+        Cursor ponteiroMouse = new Cursor(Cursor.WAIT_CURSOR);
+        setCursor(ponteiroMouse);
+    }
+
+    private void cursorDefault() {
+        Cursor ponteiroMouse = new Cursor(Cursor.DEFAULT_CURSOR);
+        setCursor(ponteiroMouse);
+    }
+
+    public CondicaoView(CadastroEquipamentoView equipamento) {
         initComponents();
-        this.equipamento = equipamento;
     }
 
     /**
@@ -131,11 +164,20 @@ public class CondicaoView extends javax.swing.JFrame {
     }//GEN-LAST:event_dataActionPerformed
 
     private void botaoSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoSalvarActionPerformed
-        equipamento.setCondicao(condicaoComboBox.getSelectedItem().toString());
+        condicao = new Condicao();
+
+        condicao.setCondicaoDataInicio(Date.valueOf(data.getText()));
+        condicao.setEquipamentoId(equipamentoId);
+        condicao.setCondicaoEquipamento(condicaoComboBox.getToolTipText());
+        cursorWait();
+        this.condicaoController.create(condicao);
+        JOptionPane.showMessageDialog(this, "Cadastro efetuado com sucesso");
+        this.dispose();
+        cursorDefault();
     }//GEN-LAST:event_botaoSalvarActionPerformed
 
     private void botaoCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCancelarActionPerformed
-        // TODO add your handling code here:
+        dispose();
     }//GEN-LAST:event_botaoCancelarActionPerformed
 
     /**

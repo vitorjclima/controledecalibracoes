@@ -13,6 +13,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Query;
 import javax.persistence.EntityNotFoundException;
+import javax.persistence.Persistence;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
@@ -22,10 +23,19 @@ import javax.persistence.criteria.Root;
  */
 public class EquipamentoJpaController implements Serializable {
 
+    private EntityManagerFactory emf = null;
+
     public EquipamentoJpaController(EntityManagerFactory emf) {
         this.emf = emf;
     }
-    private EntityManagerFactory emf = null;
+
+    public EquipamentoJpaController() {
+        this.createEntityManagerFactory();
+    }
+
+    private void createEntityManagerFactory() {
+        this.emf = Persistence.createEntityManagerFactory("ControleDeIntervencoesUP");
+    }
 
     public EntityManager getEntityManager() {
         return emf.createEntityManager();
