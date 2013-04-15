@@ -30,14 +30,31 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MenuCadastroEmpresaActionPerformed"/>
               </Events>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="MenuCadastroEquipamento">
+            <Menu class="javax.swing.JMenu" name="jMenu1">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Equipamento"/>
               </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MenuCadastroEquipamentoActionPerformed"/>
-              </Events>
-            </MenuItem>
+              <SubComponents>
+                <MenuItem class="javax.swing.JMenuItem" name="MenuCadastroEquipamentoCadastro">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Cadastro"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MenuCadastroEquipamentoCadastroActionPerformed"/>
+                  </Events>
+                </MenuItem>
+                <MenuItem class="javax.swing.JMenuItem" name="MenuCadastroEquipamentoCondicao">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Condi&#xe7;&#xe3;o"/>
+                  </Properties>
+                </MenuItem>
+                <MenuItem class="javax.swing.JMenuItem" name="MenuCadastroEquipamentoTolerancia">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Toler&#xe2;ncia"/>
+                  </Properties>
+                </MenuItem>
+              </SubComponents>
+            </Menu>
             <MenuItem class="javax.swing.JMenuItem" name="MenuCadastroPessoaSistemaMedicao">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Sistema de Medi&#xe7;&#xe3;o"/>

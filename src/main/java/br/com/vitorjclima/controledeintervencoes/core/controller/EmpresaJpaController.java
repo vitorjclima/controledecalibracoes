@@ -146,6 +146,19 @@ public class EmpresaJpaController implements Serializable {
             em.close();
         }
     }
+    
+        public Empresa findEmpresaNomeFantasia(String nomeFantasia) {
+        EntityManager em = getEntityManager();
+        try {
+            em.getTransaction().begin();
+            Query createNamedQuery = em.createNamedQuery("Empresa.findByEmpresaNomeFantasia");
+            createNamedQuery.setParameter("empresaNomeFantasia", nomeFantasia);
+            em.getTransaction().commit();
+            return (Empresa) createNamedQuery.getSingleResult();
+        } finally {
+            em.close();
+        }
+    }
 
     public int getEmpresaCount() {
         EntityManager em = getEntityManager();

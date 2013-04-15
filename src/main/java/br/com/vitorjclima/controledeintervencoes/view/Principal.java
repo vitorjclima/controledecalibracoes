@@ -187,7 +187,10 @@ public class Principal extends javax.swing.JFrame {
         menuCadastro = new javax.swing.JMenu();
         MenuCadastroPessoa = new javax.swing.JMenuItem();
         MenuCadastroEmpresa = new javax.swing.JMenuItem();
-        MenuCadastroEquipamento = new javax.swing.JMenuItem();
+        jMenu1 = new javax.swing.JMenu();
+        MenuCadastroEquipamentoCadastro = new javax.swing.JMenuItem();
+        MenuCadastroEquipamentoCondicao = new javax.swing.JMenuItem();
+        MenuCadastroEquipamentoTolerancia = new javax.swing.JMenuItem();
         MenuCadastroPessoaSistemaMedicao = new javax.swing.JMenuItem();
         MenuCadastroTipoIntervencao = new javax.swing.JMenuItem();
         jMenuIntervencoes = new javax.swing.JMenu();
@@ -227,13 +230,23 @@ public class Principal extends javax.swing.JFrame {
         });
         menuCadastro.add(MenuCadastroEmpresa);
 
-        MenuCadastroEquipamento.setText("Equipamento");
-        MenuCadastroEquipamento.addActionListener(new java.awt.event.ActionListener() {
+        jMenu1.setText("Equipamento");
+
+        MenuCadastroEquipamentoCadastro.setText("Cadastro");
+        MenuCadastroEquipamentoCadastro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MenuCadastroEquipamentoActionPerformed(evt);
+                MenuCadastroEquipamentoCadastroActionPerformed(evt);
             }
         });
-        menuCadastro.add(MenuCadastroEquipamento);
+        jMenu1.add(MenuCadastroEquipamentoCadastro);
+
+        MenuCadastroEquipamentoCondicao.setText("Condição");
+        jMenu1.add(MenuCadastroEquipamentoCondicao);
+
+        MenuCadastroEquipamentoTolerancia.setText("Tolerância");
+        jMenu1.add(MenuCadastroEquipamentoTolerancia);
+
+        menuCadastro.add(jMenu1);
 
         MenuCadastroPessoaSistemaMedicao.setText("Sistema de Medição");
         menuCadastro.add(MenuCadastroPessoaSistemaMedicao);
@@ -378,13 +391,9 @@ public class Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_MenuCadastroTipoIntervencaoActionPerformed
 
-    private void MenuCadastroEquipamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuCadastroEquipamentoActionPerformed
-        this.setEnabled(false);
-        equipamento.setVisible(true);
-    }//GEN-LAST:event_MenuCadastroEquipamentoActionPerformed
-
     private void MenuCadastroEmpresaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuCadastroEmpresaActionPerformed
         this.setEnabled(false);
+        empresa = new CadastroEmpresaView(this);
         empresa.setVisible(true);
     }//GEN-LAST:event_MenuCadastroEmpresaActionPerformed
 
@@ -393,6 +402,12 @@ public class Principal extends javax.swing.JFrame {
         pessoa = new PessoaView(this);
         pessoa.setVisible(true);
     }//GEN-LAST:event_MenuCadastroPessoaActionPerformed
+
+    private void MenuCadastroEquipamentoCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuCadastroEquipamentoCadastroActionPerformed
+        this.setEnabled(false);
+        equipamento = new CadastroEquipamentoView(this);
+        equipamento.setVisible(true);
+    }//GEN-LAST:event_MenuCadastroEquipamentoCadastroActionPerformed
 
     /**
      * @param args the command line arguments
@@ -436,10 +451,13 @@ public class Principal extends javax.swing.JFrame {
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem MenuCadastroEmpresa;
-    private javax.swing.JMenuItem MenuCadastroEquipamento;
+    private javax.swing.JMenuItem MenuCadastroEquipamentoCadastro;
+    private javax.swing.JMenuItem MenuCadastroEquipamentoCondicao;
+    private javax.swing.JMenuItem MenuCadastroEquipamentoTolerancia;
     private javax.swing.JMenuItem MenuCadastroPessoa;
     private javax.swing.JMenuItem MenuCadastroPessoaSistemaMedicao;
     private javax.swing.JMenuItem MenuCadastroTipoIntervencao;
+    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenuBackup;
     private javax.swing.JMenuItem jMenuBackupCriar;
     private javax.swing.JMenuItem jMenuBackupRestaurar;

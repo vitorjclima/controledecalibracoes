@@ -9,6 +9,9 @@
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
     <SyntheticProperty name="generateCenter" type="boolean" value="true"/>
   </SyntheticProperties>
+  <Events>
+    <EventHandler event="windowClosed" listener="java.awt.event.WindowListener" parameters="java.awt.event.WindowEvent" handler="formWindowClosed"/>
+  </Events>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -26,30 +29,23 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="labelRazaoSocial" linkSize="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="labelCNPJ" linkSize="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="labelNomeFantasia" linkSize="1" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="cnpj" min="-2" pref="147" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
-          </Group>
-          <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="91" pref="91" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="razaoSocial" max="32767" attributes="0"/>
-                          <Component id="nomeFantasia" max="32767" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
-                      <Component id="panelBotoes" min="-2" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="labelRazaoSocial" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="labelNomeFantasia" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="labelCNPJ" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="nomeFantasia" alignment="0" max="32767" attributes="0"/>
+                  <Component id="cnpj" max="32767" attributes="0"/>
+                  <Component id="razaoSocial" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace pref="74" max="32767" attributes="0"/>
+              <Component id="panelBotoes" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -71,9 +67,9 @@
                   <Component id="labelCNPJ" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="cnpj" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
-              <Component id="panelBotoes" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
+              <Component id="panelBotoes" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -118,7 +114,7 @@
     <Container class="java.awt.Panel" name="panelBotoes">
       <Properties>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Cursor Default"/>
+          <Color id="Default Cursor"/>
         </Property>
       </Properties>
 

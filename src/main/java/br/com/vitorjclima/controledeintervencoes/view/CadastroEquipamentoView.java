@@ -7,8 +7,6 @@ import br.com.vitorjclima.controledeintervencoes.core.controller.exceptions.Pree
 import br.com.vitorjclima.controledeintervencoes.db.Empresa;
 import br.com.vitorjclima.controledeintervencoes.db.Equipamento;
 import java.awt.Cursor;
-import java.util.AbstractList;
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.logging.Level;
@@ -30,11 +28,21 @@ public class CadastroEquipamentoView extends javax.swing.JFrame {
         initComponents();
         this.equipamentoController = new EquipamentoJpaController();
         this.empresaController = new EmpresaJpaController();
-        this.principal = principal;
         botaoEditar.setEnabled(false);
         botaoExcluir.setEnabled(false);
         botaoSalvar.setEnabled(false);
         enableCampos(false);
+    }
+
+    CadastroEquipamentoView(Principal principal) {
+        initComponents();
+        this.equipamentoController = new EquipamentoJpaController();
+        this.empresaController = new EmpresaJpaController();
+        this.principal = principal;
+        botaoEditar.setEnabled(false);
+        botaoExcluir.setEnabled(false);
+        botaoSalvar.setEnabled(false);
+        enableCampos(false);   
     }
 
     private void enableCampos(boolean x) {
@@ -49,6 +57,8 @@ public class CadastroEquipamentoView extends javax.swing.JFrame {
 
     private void carregaEmpresas() {
         cursorWait();
+        empresaComboBox.removeAllItems();
+        
         List<Empresa> lista = empresaController.findEmpresaEntities();
 
         for (Iterator itr = lista.iterator(); itr.hasNext();) {
@@ -110,8 +120,9 @@ public class CadastroEquipamentoView extends javax.swing.JFrame {
         numeroSerie = new javax.swing.JTextField();
         faixaMedicao = new javax.swing.JTextField();
         menorDivisao = new javax.swing.JTextField();
-        labelEmpresa = new javax.swing.JLabel();
         empresaComboBox = new javax.swing.JComboBox();
+        labelEmpresa = new javax.swing.JLabel();
+        labelEquipamento = new javax.swing.JLabel();
         panelBotoes = new java.awt.Panel();
         botaoNovo = new javax.swing.JButton();
         botaoEditar = new javax.swing.JButton();
@@ -119,12 +130,17 @@ public class CadastroEquipamentoView extends javax.swing.JFrame {
         botaoExcluir = new javax.swing.JButton();
         botaoPesquisar = new javax.swing.JButton();
         pesquisar = new javax.swing.JTextField();
-        labelEquipamento = new javax.swing.JLabel();
         equipamentoId = new javax.swing.JFormattedTextField();
 
         jScrollPane1.setViewportView(jTree1);
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Cadastro de Equipamento");
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosed(java.awt.event.WindowEvent evt) {
+                formWindowClosed(evt);
+            }
+        });
 
         labelDescricao.setText("Descrição");
 
@@ -136,13 +152,16 @@ public class CadastroEquipamentoView extends javax.swing.JFrame {
 
         labelMenorDivisao.setText("Menor Divisão");
 
-        labelEmpresa.setText("Empresa");
-
-        empresaComboBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                empresaComboBoxActionPerformed(evt);
+        empresaComboBox.setFocusCycleRoot(true);
+        empresaComboBox.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                empresaComboBoxMouseClicked(evt);
             }
         });
+
+        labelEmpresa.setText("Empresa");
+
+        labelEquipamento.setText("Equipamento");
 
         panelBotoes.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
@@ -224,8 +243,6 @@ public class CadastroEquipamentoView extends javax.swing.JFrame {
                 .addGap(5, 5, 5))
         );
 
-        labelEquipamento.setText("Equipamento");
-
         equipamentoId.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat(""))));
         equipamentoId.setToolTipText("");
         equipamentoId.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -244,7 +261,7 @@ public class CadastroEquipamentoView extends javax.swing.JFrame {
                     .addComponent(labelFaixaMedicao)
                     .addComponent(labelMenorDivisao)
                     .addComponent(labelEmpresa))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 5, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(equipamentoId, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(descricao, javax.swing.GroupLayout.DEFAULT_SIZE, 308, Short.MAX_VALUE)
@@ -253,9 +270,9 @@ public class CadastroEquipamentoView extends javax.swing.JFrame {
                     .addComponent(faixaMedicao, javax.swing.GroupLayout.DEFAULT_SIZE, 308, Short.MAX_VALUE)
                     .addComponent(menorDivisao, javax.swing.GroupLayout.DEFAULT_SIZE, 308, Short.MAX_VALUE)
                     .addComponent(empresaComboBox, 0, 308, Short.MAX_VALUE))
-                .addContainerGap(11, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addGap(68, 68, 68)
+                .addGap(86, 86, 86)
                 .addComponent(panelBotoes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -270,18 +287,16 @@ public class CadastroEquipamentoView extends javax.swing.JFrame {
                     .addComponent(labelEquipamento)
                     .addComponent(equipamentoId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(labelDescricao)
-                                    .addComponent(descricao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(labelModelo))
-                            .addComponent(modelo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(labelNumeroSerie))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelDescricao)
+                    .addComponent(descricao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelModelo)
+                    .addComponent(modelo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelNumeroSerie)
                     .addComponent(numeroSerie, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -295,7 +310,7 @@ public class CadastroEquipamentoView extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(labelEmpresa)
                     .addComponent(empresaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(21, 21, 21)
                 .addComponent(panelBotoes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -321,6 +336,7 @@ public class CadastroEquipamentoView extends javax.swing.JFrame {
     private void botaoEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoEditarActionPerformed
         enableCampos(true);
         setEditar(true);
+        carregaEmpresas();
     }//GEN-LAST:event_botaoEditarActionPerformed
 
     private void botaoSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoSalvarActionPerformed
@@ -334,8 +350,9 @@ public class CadastroEquipamentoView extends javax.swing.JFrame {
             this.equipamento.setEquipamentoNumeroSerie(numeroSerie.getText());
             this.equipamento.setEquipamentoFaixaMedicao(faixaMedicao.getText());
             this.equipamento.setEquipamentoMenorDivisao(menorDivisao.getText());
-            this.equipamento.setEmpresaId(empresaComboBox.getSelectedIndex());
-            this.equipamento.setEquipamentoTolerancia(0);
+            
+
+            this.equipamento.setEmpresaId(empresaController.findEmpresaNomeFantasia(empresaComboBox.getModel().getSelectedItem().toString()).getEmpresaId());
 
             if (descricao.getText().equals("")
                     || modelo.getText().equals("")
@@ -376,7 +393,8 @@ public class CadastroEquipamentoView extends javax.swing.JFrame {
             this.equipamento.setEquipamentoNumeroSerie(numeroSerie.getText());
             this.equipamento.setEquipamentoFaixaMedicao(faixaMedicao.getText());
             this.equipamento.setEquipamentoMenorDivisao(menorDivisao.getText());
-            this.equipamento.setEmpresaId(empresaComboBox.getSelectedIndex());
+            System.out.println("Passei aqui: "+empresaComboBox.getName());
+            //this.equipamento.setEmpresaId(empresaComboBox.getSelectedIndex());
 
             if (descricao.getText().equals("")
                     || modelo.getText().equals("")
@@ -453,8 +471,14 @@ public class CadastroEquipamentoView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_pesquisarActionPerformed
 
-    private void empresaComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_empresaComboBoxActionPerformed
-    }//GEN-LAST:event_empresaComboBoxActionPerformed
+    private void empresaComboBoxMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_empresaComboBoxMouseClicked
+
+    }//GEN-LAST:event_empresaComboBoxMouseClicked
+
+    private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
+        this.setVisible(false);
+        this.principal.setEnabled(true);
+    }//GEN-LAST:event_formWindowClosed
 
     /**
      * @param args the command line arguments
