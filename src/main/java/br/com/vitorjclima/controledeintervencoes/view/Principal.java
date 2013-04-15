@@ -282,7 +282,7 @@ public class Principal extends javax.swing.JFrame {
 
         jMenuIntervencoes.setText("Intervenções");
 
-        jMenuIntervencoesNovo.setText("Novo");
+        jMenuIntervencoesNovo.setText("Nova");
         jMenuIntervencoesNovo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuIntervencoesNovoActionPerformed(evt);
@@ -404,6 +404,9 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuBackupCriarActionPerformed
 
     private void jMenuIntervencoesNovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuIntervencoesNovoActionPerformed
+        this.setEnabled(false);
+        intervencao = new IntervencaoView(this);
+        intervencao.setVisible(true);
     }//GEN-LAST:event_jMenuIntervencoesNovoActionPerformed
 
     private void MenuCadastroTipoIntervencaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuCadastroTipoIntervencaoActionPerformed

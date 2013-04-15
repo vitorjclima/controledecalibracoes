@@ -4,17 +4,158 @@
  */
 package br.com.vitorjclima.controledeintervencoes.view;
 
+import br.com.vitorjclima.controledeintervencoes.core.controller.EmpresaJpaController;
+import br.com.vitorjclima.controledeintervencoes.core.controller.EquipamentoJpaController;
+import br.com.vitorjclima.controledeintervencoes.core.controller.IntervencaoJpaController;
+import br.com.vitorjclima.controledeintervencoes.core.controller.IntervencaoTipoJpaController;
+import br.com.vitorjclima.controledeintervencoes.core.controller.PessoaJpaController;
+import br.com.vitorjclima.controledeintervencoes.db.Empresa;
+import br.com.vitorjclima.controledeintervencoes.db.Equipamento;
+import br.com.vitorjclima.controledeintervencoes.db.Intervencao;
+import br.com.vitorjclima.controledeintervencoes.db.IntervencaoTipo;
+import br.com.vitorjclima.controledeintervencoes.db.Pessoa;
+import java.awt.Cursor;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Iterator;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author vitor
  */
 public class IntervencaoView extends javax.swing.JFrame {
 
+    private EquipamentoJpaController equipamentoController;
+    private EmpresaJpaController empresaController;
+    private IntervencaoTipoJpaController intervencaoTipoJpaController;
+    private PessoaJpaController pessoaJpaController;
+    private Equipamento equipamento;
+    private Principal principal;
+    private Intervencao intervencao;
+    private IntervencaoJpaController intervencaoJpaController;
+    private boolean editar;
+
     /**
      * Creates new form IntervencaoView
      */
     public IntervencaoView() {
         initComponents();
+        this.equipamentoController = new EquipamentoJpaController();
+        this.empresaController = new EmpresaJpaController();
+        this.intervencaoTipoJpaController = new IntervencaoTipoJpaController();
+        this.pessoaJpaController = new PessoaJpaController();
+        this.intervencaoJpaController = new IntervencaoJpaController();
+        carregaEquipamentos();
+        carregaEmpresas();
+        carregaTipoIntervencao();
+        carregaPessoa();
+    }
+
+    public IntervencaoView(Principal principal) {
+        initComponents();
+        this.principal = principal;
+        this.equipamentoController = new EquipamentoJpaController();
+        this.empresaController = new EmpresaJpaController();
+        this.intervencaoTipoJpaController = new IntervencaoTipoJpaController();
+        this.pessoaJpaController = new PessoaJpaController();
+        this.intervencaoJpaController = new IntervencaoJpaController();
+        carregaEquipamentos();
+        carregaEmpresas();
+        carregaTipoIntervencao();
+        carregaPessoa();
+    }
+
+    public boolean getEditar() {
+        return editar;
+    }
+
+    public void setEditar(boolean editar) {
+        this.editar = editar;
+    }
+
+    private void cursorWait() {
+        Cursor ponteiroMouse = new Cursor(Cursor.WAIT_CURSOR);
+        setCursor(ponteiroMouse);
+    }
+
+    private void cursorDefault() {
+        Cursor ponteiroMouse = new Cursor(Cursor.DEFAULT_CURSOR);
+        setCursor(ponteiroMouse);
+    }
+
+    private void carregaEquipamentos() {
+        cursorWait();
+        equipamentoComboBox.removeAllItems();
+
+        List<Equipamento> lista = equipamentoController.findEquipamentoEntities();
+
+        for (Iterator itr = lista.iterator(); itr.hasNext();) {
+            Equipamento equip = (Equipamento) itr.next();
+
+            equipamentoComboBox.addItem(equip.getEquipamentoId() + " - " + equip.getEquipamentoDescricao());
+        }
+        cursorDefault();
+    }
+
+    private void carregaEmpresas() {
+        cursorWait();
+        empresaComboBox.removeAllItems();
+
+        List<Empresa> lista = empresaController.findEmpresaEntities();
+
+        for (Iterator itr = lista.iterator(); itr.hasNext();) {
+            Empresa contato = (Empresa) itr.next();
+
+            empresaComboBox.addItem(contato.getEmpresaNomeFantasia());
+        }
+        cursorDefault();
+    }
+
+    private void carregaTipoIntervencao() {
+        cursorWait();
+        tipoIntervencaoComboBox.removeAllItems();
+
+        List<IntervencaoTipo> lista = intervencaoTipoJpaController.findIntervencaoTipoEntities();
+
+        for (Iterator itr = lista.iterator(); itr.hasNext();) {
+            IntervencaoTipo contato = (IntervencaoTipo) itr.next();
+
+            tipoIntervencaoComboBox.addItem(contato.getIntervencaoTipoId());
+        }
+        cursorDefault();
+    }
+
+    private void carregaPessoa() {
+        cursorWait();
+        pessoaComboBox.removeAllItems();
+
+        List<Pessoa> lista = pessoaJpaController.findPessoaEntities();
+
+        for (Iterator itr = lista.iterator(); itr.hasNext();) {
+            Pessoa contato = (Pessoa) itr.next();
+
+            pessoaComboBox.addItem(contato.getPessoaCpf() + " - " + contato.getPessoaNome());
+        }
+        cursorDefault();
+    }
+
+    public java.util.Date formataData(String dataRec) {
+        if (dataRec == null || dataRec.equals("  /  /    ")) {
+            return null;
+        }
+
+        java.util.Date date = null;
+        try {
+            SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+            date = formatter.parse(dataRec);
+        } catch (ParseException ex) {
+            Logger.getLogger(Intervencao.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return date;
     }
 
     /**
@@ -28,80 +169,69 @@ public class IntervencaoView extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox();
-        jComboBox2 = new javax.swing.JComboBox();
+        equipamentoComboBox = new javax.swing.JComboBox();
+        empresaComboBox = new javax.swing.JComboBox();
         jLabel3 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox();
+        tipoIntervencaoComboBox = new javax.swing.JComboBox();
         jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        laudo = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        jFormattedTextField1 = new javax.swing.JFormattedTextField();
         jLabel6 = new javax.swing.JLabel();
-        jComboBox4 = new javax.swing.JComboBox();
+        pessoaComboBox = new javax.swing.JComboBox();
         jLabel7 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jButton2 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        botaoPesquisar = new javax.swing.JButton();
-        pesquisar = new javax.swing.JTextField();
+        observacao = new javax.swing.JTextArea();
         botaoSalvar = new javax.swing.JButton();
+        data = new javax.swing.JFormattedTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Intervenções");
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosed(java.awt.event.WindowEvent evt) {
+                formWindowClosed(evt);
+            }
+        });
 
         jLabel1.setText("Equipamento");
 
         jLabel2.setText("Empresa Responsável");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
         jLabel3.setText("Tipo");
-
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabel4.setText("Laudo");
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        laudo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                laudoActionPerformed(evt);
             }
         });
 
         jLabel5.setText("Data");
 
-        jFormattedTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jFormattedTextField1ActionPerformed(evt);
-            }
-        });
-
         jLabel6.setText("Aceito por");
-
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabel7.setText("Observação");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
-
-        jButton2.setText("Excluir");
-
-        jButton1.setText("Editar");
-
-        botaoPesquisar.setText("Pesquisar");
-        botaoPesquisar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botaoPesquisarActionPerformed(evt);
-            }
-        });
+        observacao.setColumns(20);
+        observacao.setRows(5);
+        jScrollPane1.setViewportView(observacao);
 
         botaoSalvar.setText("Salvar");
         botaoSalvar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoSalvarActionPerformed(evt);
+            }
+        });
+
+        try {
+            data.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        data.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        data.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dataActionPerformed(evt);
             }
         });
 
@@ -120,33 +250,23 @@ public class IntervencaoView extends javax.swing.JFrame {
                             .addComponent(jLabel4)
                             .addComponent(jLabel5)
                             .addComponent(jLabel6))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jComboBox1, 0, 267, Short.MAX_VALUE)
-                            .addComponent(jComboBox2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jComboBox3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jTextField1)
-                            .addComponent(jFormattedTextField1)
-                            .addComponent(jComboBox4, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(equipamentoComboBox, 0, 267, Short.MAX_VALUE)
+                            .addComponent(empresaComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(tipoIntervencaoComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(laudo)
+                            .addComponent(pessoaComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(data, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel7)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(jScrollPane1))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(118, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(pesquisar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(botaoPesquisar))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(botaoSalvar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton2)))
-                .addGap(108, 108, 108))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(botaoSalvar)
+                .addGap(179, 179, 179))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -154,61 +274,86 @@ public class IntervencaoView extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(equipamentoComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel2)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(empresaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel3)
-                    .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tipoIntervencaoComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel4)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(laudo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(9, 9, 9)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(data, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel6)
-                    .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(pessoaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(botaoSalvar)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(pesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botaoPesquisar))
+                .addComponent(botaoSalvar)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void laudoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_laudoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
-    private void jFormattedTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFormattedTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jFormattedTextField1ActionPerformed
-
-    private void botaoPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoPesquisarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_botaoPesquisarActionPerformed
+    }//GEN-LAST:event_laudoActionPerformed
 
     private void botaoSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoSalvarActionPerformed
-        // TODO add your handling code here:
+        this.intervencao = new Intervencao();
+        String[] equipId = equipamentoComboBox.getModel().getSelectedItem().toString().split(" - ");
+        String[] PessoaCpf = pessoaComboBox.getModel().getSelectedItem().toString().split(" - ");
+        
+        this.intervencao.setIntervencaoAceitaPor(PessoaCpf[0]);
+        this.intervencao.setIntervencaoEmpresaCodigoLaudo(laudo.getText());
+        this.intervencao.setIntervencaoTipoId(tipoIntervencaoComboBox.getModel().getSelectedItem().toString());
+        this.intervencao.setIntervencaoObservacao(observacao.getText());
+        this.intervencao.setEmpresaId(empresaController.findEmpresaNomeFantasia(empresaComboBox.getModel().getSelectedItem().toString()).getEmpresaId());
+        this.intervencao.setEquipamentoId(Integer.parseInt(equipId[0]));
+        this.intervencao.setIntervencaoData(formataData(data.getText()));
+
+
+        if (laudo.getText().equals("") || data.getText().equals("  /  /    ")) {
+            JOptionPane.showMessageDialog(this, "Você deve preencher todos os campos");
+        } else {
+
+            try {
+                this.intervencaoJpaController.create(intervencao);
+                JOptionPane.showMessageDialog(this, "Cadastro efetuado com sucesso");
+                this.dispose();
+                this.principal.setEnabled(true);
+            } catch (Exception ex) {
+                Logger.getLogger(CadastroEquipamentoView.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+            cursorDefault();
+        }
+    }
+
+    private void botaoExcluirActionPerformed(java.awt.event.ActionEvent evt) {
     }//GEN-LAST:event_botaoSalvarActionPerformed
+
+    private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
+        this.setVisible(false);
+        this.principal.setEnabled(true);
+    }//GEN-LAST:event_formWindowClosed
+
+    private void dataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dataActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dataActionPerformed
 
     /**
      * @param args the command line arguments
@@ -224,16 +369,22 @@ public class IntervencaoView extends javax.swing.JFrame {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
+
+
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(IntervencaoView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(IntervencaoView.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(IntervencaoView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(IntervencaoView.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(IntervencaoView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(IntervencaoView.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(IntervencaoView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(IntervencaoView.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
@@ -245,15 +396,10 @@ public class IntervencaoView extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton botaoPesquisar;
     private javax.swing.JButton botaoSalvar;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JComboBox jComboBox1;
-    private javax.swing.JComboBox jComboBox2;
-    private javax.swing.JComboBox jComboBox3;
-    private javax.swing.JComboBox jComboBox4;
-    private javax.swing.JFormattedTextField jFormattedTextField1;
+    private javax.swing.JFormattedTextField data;
+    private javax.swing.JComboBox empresaComboBox;
+    private javax.swing.JComboBox equipamentoComboBox;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -262,8 +408,9 @@ public class IntervencaoView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField pesquisar;
+    private javax.swing.JTextField laudo;
+    private javax.swing.JTextArea observacao;
+    private javax.swing.JComboBox pessoaComboBox;
+    private javax.swing.JComboBox tipoIntervencaoComboBox;
     // End of variables declaration//GEN-END:variables
 }
