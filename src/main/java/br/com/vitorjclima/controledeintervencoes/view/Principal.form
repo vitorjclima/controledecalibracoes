@@ -55,6 +55,9 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Toler&#xe2;ncia"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MenuCadastroEquipamentoToleranciaActionPerformed"/>
+                  </Events>
                 </MenuItem>
               </SubComponents>
             </Menu>
@@ -62,6 +65,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Sistema de Medi&#xe7;&#xe3;o"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MenuCadastroPessoaSistemaMedicaoActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="MenuCadastroTipoIntervencao">
               <Properties>

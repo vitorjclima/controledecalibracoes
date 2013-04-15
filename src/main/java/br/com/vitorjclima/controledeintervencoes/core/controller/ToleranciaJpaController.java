@@ -5,15 +5,14 @@
 package br.com.vitorjclima.controledeintervencoes.core.controller;
 
 import br.com.vitorjclima.controledeintervencoes.core.controller.exceptions.NonexistentEntityException;
-import br.com.vitorjclima.controledeintervencoes.core.controller.exceptions.PreexistingEntityException;
 import br.com.vitorjclima.controledeintervencoes.db.Tolerancia;
-import br.com.vitorjclima.controledeintervencoes.db.ToleranciaPK;
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Query;
 import javax.persistence.EntityNotFoundException;
+import javax.persistence.Persistence;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
@@ -31,22 +30,22 @@ public class ToleranciaJpaController implements Serializable {
     public EntityManager getEntityManager() {
         return emf.createEntityManager();
     }
+    
+      public ToleranciaJpaController() {
+        this.createEntityManagerFactory();
+    }
 
-    public void create(Tolerancia tolerancia) throws PreexistingEntityException, Exception {
-        if (tolerancia.getToleranciaPK() == null) {
-            tolerancia.setToleranciaPK(new ToleranciaPK());
-        }
+    private void createEntityManagerFactory() {
+        this.emf = Persistence.createEntityManagerFactory("ControleDeIntervencoesUP");
+    }
+
+    public void create(Tolerancia tolerancia) {
         EntityManager em = null;
         try {
             em = getEntityManager();
             em.getTransaction().begin();
             em.persist(tolerancia);
             em.getTransaction().commit();
-        } catch (Exception ex) {
-            if (findTolerancia(tolerancia.getToleranciaPK()) != null) {
-                throw new PreexistingEntityException("Tolerancia " + tolerancia + " already exists.", ex);
-            }
-            throw ex;
         } finally {
             if (em != null) {
                 em.close();
@@ -64,7 +63,7 @@ public class ToleranciaJpaController implements Serializable {
         } catch (Exception ex) {
             String msg = ex.getLocalizedMessage();
             if (msg == null || msg.length() == 0) {
-                ToleranciaPK id = tolerancia.getToleranciaPK();
+                Integer id = tolerancia.getToleranciaId();
                 if (findTolerancia(id) == null) {
                     throw new NonexistentEntityException("The tolerancia with id " + id + " no longer exists.");
                 }
@@ -77,7 +76,7 @@ public class ToleranciaJpaController implements Serializable {
         }
     }
 
-    public void destroy(ToleranciaPK id) throws NonexistentEntityException {
+    public void destroy(Integer id) throws NonexistentEntityException {
         EntityManager em = null;
         try {
             em = getEntityManager();
@@ -85,7 +84,7 @@ public class ToleranciaJpaController implements Serializable {
             Tolerancia tolerancia;
             try {
                 tolerancia = em.getReference(Tolerancia.class, id);
-                tolerancia.getToleranciaPK();
+                tolerancia.getToleranciaId();
             } catch (EntityNotFoundException enfe) {
                 throw new NonexistentEntityException("The tolerancia with id " + id + " no longer exists.", enfe);
             }
@@ -122,7 +121,7 @@ public class ToleranciaJpaController implements Serializable {
         }
     }
 
-    public Tolerancia findTolerancia(ToleranciaPK id) {
+    public Tolerancia findTolerancia(Integer id) {
         EntityManager em = getEntityManager();
         try {
             return em.find(Tolerancia.class, id);

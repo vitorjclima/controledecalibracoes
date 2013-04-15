@@ -1,6 +1,7 @@
 package br.com.vitorjclima.controledeintervencoes.view;
 
 import br.com.vitorjclima.controledeintervencoes.db.BD;
+import br.com.vitorjclima.controledeintervencoes.db.SistemaMedicao;
 import java.awt.Cursor;
 import java.io.BufferedReader;
 import java.io.File;
@@ -21,11 +22,14 @@ import javax.swing.JOptionPane;
  */
 public class Principal extends javax.swing.JFrame {
 
-    private CadastroEmpresaView empresa = new CadastroEmpresaView();
-    private CadastroEquipamentoView equipamento = new CadastroEquipamentoView();
-    private CadastroCondicaoView condicao = new CadastroCondicaoView();
-    private IntervencaoView intervencao = new IntervencaoView();
+    private CadastroEmpresaView empresa;;
+    private CadastroEquipamentoView equipamento;
+    private CadastroCondicaoView condicao;
+    private CadastroIntervencaoTipoView intervencaoTipo;
+    private IntervencaoView intervencao;
+    private CadastroSistemaMedicaoView sistemaMedicao;
     private PessoaView pessoa;
+    private CadastroToleranciaView tolerancia;
     FileWriter backup;
     private BD bd;
 
@@ -249,11 +253,21 @@ public class Principal extends javax.swing.JFrame {
         jMenu1.add(MenuCadastroEquipamentoCondicao);
 
         MenuCadastroEquipamentoTolerancia.setText("Tolerância");
+        MenuCadastroEquipamentoTolerancia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MenuCadastroEquipamentoToleranciaActionPerformed(evt);
+            }
+        });
         jMenu1.add(MenuCadastroEquipamentoTolerancia);
 
         menuCadastro.add(jMenu1);
 
         MenuCadastroPessoaSistemaMedicao.setText("Sistema de Medição");
+        MenuCadastroPessoaSistemaMedicao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MenuCadastroPessoaSistemaMedicaoActionPerformed(evt);
+            }
+        });
         menuCadastro.add(MenuCadastroPessoaSistemaMedicao);
 
         MenuCadastroTipoIntervencao.setText("Tipo de Intervenção");
@@ -393,7 +407,9 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuIntervencoesNovoActionPerformed
 
     private void MenuCadastroTipoIntervencaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuCadastroTipoIntervencaoActionPerformed
-        // TODO add your handling code here:
+        this.setEnabled(false);
+        intervencaoTipo = new CadastroIntervencaoTipoView(this);
+        intervencaoTipo.setVisible(true);
     }//GEN-LAST:event_MenuCadastroTipoIntervencaoActionPerformed
 
     private void MenuCadastroEmpresaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuCadastroEmpresaActionPerformed
@@ -419,6 +435,18 @@ public class Principal extends javax.swing.JFrame {
         condicao = new CadastroCondicaoView(this);
         condicao.setVisible(true); 
     }//GEN-LAST:event_MenuCadastroEquipamentoCondicaoActionPerformed
+
+    private void MenuCadastroPessoaSistemaMedicaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuCadastroPessoaSistemaMedicaoActionPerformed
+        this.setEnabled(false);
+        sistemaMedicao = new CadastroSistemaMedicaoView(this);
+        sistemaMedicao.setVisible(true); 
+    }//GEN-LAST:event_MenuCadastroPessoaSistemaMedicaoActionPerformed
+
+    private void MenuCadastroEquipamentoToleranciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuCadastroEquipamentoToleranciaActionPerformed
+        this.setEnabled(false);
+        tolerancia = new CadastroToleranciaView(this);
+        tolerancia.setVisible(true); 
+    }//GEN-LAST:event_MenuCadastroEquipamentoToleranciaActionPerformed
 
     /**
      * @param args the command line arguments

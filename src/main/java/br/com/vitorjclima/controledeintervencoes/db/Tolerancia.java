@@ -7,8 +7,10 @@ package br.com.vitorjclima.controledeintervencoes.db;
 import java.io.Serializable;
 import javax.persistence.Basic;
 import javax.persistence.Column;
-import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
@@ -23,14 +25,19 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Tolerancia.findAll", query = "SELECT t FROM Tolerancia t"),
-    @NamedQuery(name = "Tolerancia.findByToleranciaId", query = "SELECT t FROM Tolerancia t WHERE t.toleranciaPK.toleranciaId = :toleranciaId"),
-    @NamedQuery(name = "Tolerancia.findByEquipamentoId", query = "SELECT t FROM Tolerancia t WHERE t.toleranciaPK.equipamentoId = :equipamentoId"),
+    @NamedQuery(name = "Tolerancia.findByToleranciaId", query = "SELECT t FROM Tolerancia t WHERE t.toleranciaId = :toleranciaId"),
+    @NamedQuery(name = "Tolerancia.findByEquipamentoId", query = "SELECT t FROM Tolerancia t WHERE t.equipamentoId = :equipamentoId"),
     @NamedQuery(name = "Tolerancia.findBySistemaMedicaoId", query = "SELECT t FROM Tolerancia t WHERE t.sistemaMedicaoId = :sistemaMedicaoId"),
     @NamedQuery(name = "Tolerancia.findByToleranciaValor", query = "SELECT t FROM Tolerancia t WHERE t.toleranciaValor = :toleranciaValor")})
 public class Tolerancia implements Serializable {
     private static final long serialVersionUID = 1L;
-    @EmbeddedId
-    protected ToleranciaPK toleranciaPK;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Basic(optional = false)
+    @Column(name = "tolerancia_id")
+    private Integer toleranciaId;
+    @Column(name = "equipamento_id")
+    private Integer equipamentoId;
     @Basic(optional = false)
     @Column(name = "sistema_medicao_id")
     private String sistemaMedicaoId;
@@ -41,26 +48,30 @@ public class Tolerancia implements Serializable {
     public Tolerancia() {
     }
 
-    public Tolerancia(ToleranciaPK toleranciaPK) {
-        this.toleranciaPK = toleranciaPK;
+    public Tolerancia(Integer toleranciaId) {
+        this.toleranciaId = toleranciaId;
     }
 
-    public Tolerancia(ToleranciaPK toleranciaPK, String sistemaMedicaoId, double toleranciaValor) {
-        this.toleranciaPK = toleranciaPK;
+    public Tolerancia(Integer toleranciaId, String sistemaMedicaoId, double toleranciaValor) {
+        this.toleranciaId = toleranciaId;
         this.sistemaMedicaoId = sistemaMedicaoId;
         this.toleranciaValor = toleranciaValor;
     }
 
-    public Tolerancia(int toleranciaId, int equipamentoId) {
-        this.toleranciaPK = new ToleranciaPK(toleranciaId, equipamentoId);
+    public Integer getToleranciaId() {
+        return toleranciaId;
     }
 
-    public ToleranciaPK getToleranciaPK() {
-        return toleranciaPK;
+    public void setToleranciaId(Integer toleranciaId) {
+        this.toleranciaId = toleranciaId;
     }
 
-    public void setToleranciaPK(ToleranciaPK toleranciaPK) {
-        this.toleranciaPK = toleranciaPK;
+    public Integer getEquipamentoId() {
+        return equipamentoId;
+    }
+
+    public void setEquipamentoId(Integer equipamentoId) {
+        this.equipamentoId = equipamentoId;
     }
 
     public String getSistemaMedicaoId() {
@@ -82,7 +93,7 @@ public class Tolerancia implements Serializable {
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (toleranciaPK != null ? toleranciaPK.hashCode() : 0);
+        hash += (toleranciaId != null ? toleranciaId.hashCode() : 0);
         return hash;
     }
 
@@ -93,7 +104,7 @@ public class Tolerancia implements Serializable {
             return false;
         }
         Tolerancia other = (Tolerancia) object;
-        if ((this.toleranciaPK == null && other.toleranciaPK != null) || (this.toleranciaPK != null && !this.toleranciaPK.equals(other.toleranciaPK))) {
+        if ((this.toleranciaId == null && other.toleranciaId != null) || (this.toleranciaId != null && !this.toleranciaId.equals(other.toleranciaId))) {
             return false;
         }
         return true;
@@ -101,7 +112,7 @@ public class Tolerancia implements Serializable {
 
     @Override
     public String toString() {
-        return "br.com.vitorjclima.controledeintervencoes.db.Tolerancia[ toleranciaPK=" + toleranciaPK + " ]";
+        return "br.com.vitorjclima.controledeintervencoes.db.Tolerancia[ toleranciaId=" + toleranciaId + " ]";
     }
     
 }
