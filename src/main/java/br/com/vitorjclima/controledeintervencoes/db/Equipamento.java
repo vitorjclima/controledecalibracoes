@@ -26,51 +26,34 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Equipamento.findByEquipamentoId", query = "SELECT e FROM Equipamento e WHERE e.equipamentoId = :equipamentoId"),
     @NamedQuery(name = "Equipamento.findByEmpresaId", query = "SELECT e FROM Equipamento e WHERE e.empresaId = :empresaId"),
     @NamedQuery(name = "Equipamento.findByEquipamentoDescricao", query = "SELECT e FROM Equipamento e WHERE e.equipamentoDescricao = :equipamentoDescricao"),
-    @NamedQuery(name = "Equipamento.findByEquipamentoModelo", query = "SELECT e FROM Equipamento e WHERE e.equipamentoModelo = :equipamentoModelo"),
-    @NamedQuery(name = "Equipamento.findByEquipamentoNumeroSerie", query = "SELECT e FROM Equipamento e WHERE e.equipamentoNumeroSerie = :equipamentoNumeroSerie"),
     @NamedQuery(name = "Equipamento.findByEquipamentoFaixaMedicao", query = "SELECT e FROM Equipamento e WHERE e.equipamentoFaixaMedicao = :equipamentoFaixaMedicao"),
     @NamedQuery(name = "Equipamento.findByEquipamentoMenorDivisao", query = "SELECT e FROM Equipamento e WHERE e.equipamentoMenorDivisao = :equipamentoMenorDivisao"),
-    @NamedQuery(name = "Equipamento.findByEquipamentoTolerancia", query = "SELECT e FROM Equipamento e WHERE e.equipamentoTolerancia = :equipamentoTolerancia")})
+    @NamedQuery(name = "Equipamento.findByEquipamentoModelo", query = "SELECT e FROM Equipamento e WHERE e.equipamentoModelo = :equipamentoModelo"),
+    @NamedQuery(name = "Equipamento.findByEquipamentoNumeroSerie", query = "SELECT e FROM Equipamento e WHERE e.equipamentoNumeroSerie = :equipamentoNumeroSerie")})
 public class Equipamento implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @Basic(optional = false)
     @Column(name = "equipamento_id")
     private Integer equipamentoId;
-    @Basic(optional = false)
     @Column(name = "empresa_id")
-    private int empresaId;
+    private Integer empresaId;
     @Column(name = "equipamento_descricao")
     private String equipamentoDescricao;
-    @Column(name = "equipamento_modelo")
-    private String equipamentoModelo;
-    @Basic(optional = false)
-    @Column(name = "equipamento_numero_serie")
-    private String equipamentoNumeroSerie;
-    @Basic(optional = false)
     @Column(name = "equipamento_faixa_medicao")
     private String equipamentoFaixaMedicao;
-    @Basic(optional = false)
     @Column(name = "equipamento_menor_divisao")
     private String equipamentoMenorDivisao;
-    @Basic(optional = false)
-    @Column(name = "equipamento_tolerancia")
-    private double equipamentoTolerancia;
+    @Column(name = "equipamento_modelo")
+    private String equipamentoModelo;
+    @Column(name = "equipamento_numero_serie")
+    private String equipamentoNumeroSerie;
 
     public Equipamento() {
     }
 
     public Equipamento(Integer equipamentoId) {
         this.equipamentoId = equipamentoId;
-    }
-
-    public Equipamento(Integer equipamentoId, int empresaId, String equipamentoNumeroSerie, String equipamentoFaixaMedicao, String equipamentoMenorDivisao, double equipamentoTolerancia) {
-        this.equipamentoId = equipamentoId;
-        this.empresaId = empresaId;
-        this.equipamentoNumeroSerie = equipamentoNumeroSerie;
-        this.equipamentoFaixaMedicao = equipamentoFaixaMedicao;
-        this.equipamentoMenorDivisao = equipamentoMenorDivisao;
-        this.equipamentoTolerancia = equipamentoTolerancia;
     }
 
     public Integer getEquipamentoId() {
@@ -81,11 +64,11 @@ public class Equipamento implements Serializable {
         this.equipamentoId = equipamentoId;
     }
 
-    public int getEmpresaId() {
+    public Integer getEmpresaId() {
         return empresaId;
     }
 
-    public void setEmpresaId(int empresaId) {
+    public void setEmpresaId(Integer empresaId) {
         this.empresaId = empresaId;
     }
 
@@ -95,22 +78,6 @@ public class Equipamento implements Serializable {
 
     public void setEquipamentoDescricao(String equipamentoDescricao) {
         this.equipamentoDescricao = equipamentoDescricao;
-    }
-
-    public String getEquipamentoModelo() {
-        return equipamentoModelo;
-    }
-
-    public void setEquipamentoModelo(String equipamentoModelo) {
-        this.equipamentoModelo = equipamentoModelo;
-    }
-
-    public String getEquipamentoNumeroSerie() {
-        return equipamentoNumeroSerie;
-    }
-
-    public void setEquipamentoNumeroSerie(String equipamentoNumeroSerie) {
-        this.equipamentoNumeroSerie = equipamentoNumeroSerie;
     }
 
     public String getEquipamentoFaixaMedicao() {
@@ -129,12 +96,20 @@ public class Equipamento implements Serializable {
         this.equipamentoMenorDivisao = equipamentoMenorDivisao;
     }
 
-    public double getEquipamentoTolerancia() {
-        return equipamentoTolerancia;
+    public String getEquipamentoModelo() {
+        return equipamentoModelo;
     }
 
-    public void setEquipamentoTolerancia(double equipamentoTolerancia) {
-        this.equipamentoTolerancia = equipamentoTolerancia;
+    public void setEquipamentoModelo(String equipamentoModelo) {
+        this.equipamentoModelo = equipamentoModelo;
+    }
+
+    public String getEquipamentoNumeroSerie() {
+        return equipamentoNumeroSerie;
+    }
+
+    public void setEquipamentoNumeroSerie(String equipamentoNumeroSerie) {
+        this.equipamentoNumeroSerie = equipamentoNumeroSerie;
     }
 
     @Override
