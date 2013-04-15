@@ -23,7 +23,7 @@ public class Principal extends javax.swing.JFrame {
 
     private CadastroEmpresaView empresa = new CadastroEmpresaView();
     private CadastroEquipamentoView equipamento = new CadastroEquipamentoView();
-    private CondicaoView condicao = new CondicaoView();
+    private CadastroCondicaoView condicao = new CadastroCondicaoView();
     private IntervencaoView intervencao = new IntervencaoView();
     private PessoaView pessoa;
     FileWriter backup;
@@ -241,6 +241,11 @@ public class Principal extends javax.swing.JFrame {
         jMenu1.add(MenuCadastroEquipamentoCadastro);
 
         MenuCadastroEquipamentoCondicao.setText("Condição");
+        MenuCadastroEquipamentoCondicao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MenuCadastroEquipamentoCondicaoActionPerformed(evt);
+            }
+        });
         jMenu1.add(MenuCadastroEquipamentoCondicao);
 
         MenuCadastroEquipamentoTolerancia.setText("Tolerância");
@@ -408,6 +413,12 @@ public class Principal extends javax.swing.JFrame {
         equipamento = new CadastroEquipamentoView(this);
         equipamento.setVisible(true);
     }//GEN-LAST:event_MenuCadastroEquipamentoCadastroActionPerformed
+
+    private void MenuCadastroEquipamentoCondicaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuCadastroEquipamentoCondicaoActionPerformed
+        this.setEnabled(false);
+        condicao = new CadastroCondicaoView(this);
+        condicao.setVisible(true); 
+    }//GEN-LAST:event_MenuCadastroEquipamentoCondicaoActionPerformed
 
     /**
      * @param args the command line arguments
