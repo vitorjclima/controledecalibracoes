@@ -44,16 +44,9 @@ public class PessoaView extends javax.swing.JFrame{
     }
 
     private void enableCampos(boolean x) {
-
-        if (x == false) {
             nome.setEnabled(x);
             cpf.setEnabled(x);
             email.setEnabled(x);
-        } else if (x == true) {
-            nome.setEnabled(x);
-            cpf.setEnabled(x);
-            email.setEnabled(x);
-        }
     }
 
     public boolean getEditar() {
