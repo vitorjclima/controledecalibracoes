@@ -42,7 +42,7 @@ public class LoginTest {
     public void testAbre_sessao() {
         
         Login instance = new Login();
-        assertEquals(true, instance.abre_sessao("natura_teste", "7J^@+(]ww@T="));
+        assertEquals(true, instance.abre_sessao("natura_vitor", "Pinguim@2013"));
     }
 
 }

@@ -31,7 +31,7 @@ public class BD {
     public void conecta_BD() throws ClassNotFoundException, SQLException {
         
         String driver = "com.mysql.jdbc.Driver";
-        String url = "jdbc:mysql://maxses.com.br:3306/natura_controle_calibracao";
+        String url = "jdbc:mysql://maxses.com.br:3306/natura_pesl";
 
         Class.forName(driver);
         conexao = DriverManager.getConnection(url, login, senha);

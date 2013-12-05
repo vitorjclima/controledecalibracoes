@@ -45,9 +45,9 @@ public class BDTest {
      */
     @Test
     public void testSet_login() {
-        instance.set_login("natura_teste","7J^@+(]ww@T=");
-        assertEquals("natura_teste", instance.getLogin());
-        assertEquals("7J^@+(]ww@T=", instance.getSenha());
+        instance.set_login("natura_vitor","Pinguim@2013");
+        assertEquals("natura_vitor", instance.getLogin());
+        assertEquals("Pinguim@2013", instance.getSenha());
     }
     
 
